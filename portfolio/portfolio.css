@@ -56,19 +56,79 @@ body {
     box-sizing: border-box;
     
     padding: 10px;
+    border: 1px solid blanchedalmond;
     border-radius: 5px;
-    background-color: rgba(194, 178, 105, 0.404);
+    
+    
 }
 
 .card {
     padding: 10px;
     border-radius: 5px;
-    background-color: rgba(182, 179, 170, 0.404);
+    background-color: rgba(208, 188, 156, 0.4);
+    
+    transition: background-color 0.2s;
+}
+
+.card:hover {
+    background-color: rgba(208, 188, 156, 0.5);
+}
+
+.card > h2 {
+    color: wheat
+}
+.card > p {
+    text-align: justify;
+}
+
+.tech-container {
+    display: flex;
+}
+
+.tech-hr {
+    color: rgba(255, 255, 255, 0.1);
+    margin: 5px 0px;
+}
+
+.tech:not(:first-child) {
+    margin-left: 5px;
+}
+
+.tech-title {
+    font-size: 0.6rem;
+    color: rgba(255, 255, 255, 0.2);
+    margin-bottom: 2px;
+}
+
+.tech {
+    background-color: rgba(255, 255, 255, 0.1);
+    
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 4px;
+
+    display: flex;
+    
+    border-radius: 4px;
+
+    text-wrap: nowrap;
+    user-select: none;
+}
+
+.tech > p {
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.tech > * {
+    align-self: center;
+    margin: 0px 2px;
+    color: wheat;
 }
 
 p {
     color: wheat;
 }
+
 
 .bg-matrix {
     position: absolute;
