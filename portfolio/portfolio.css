@@ -1,0 +1,139 @@
+/*
+█ Fuck it, no hidden margin/padding anywhere.
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+█ Full dynamic-viewport so it has all the screen on every device.
+█ Stupid mobile viewport substandart.
+*/
+body {
+    height: 100dvh;
+    width: 100dvw;
+}
+
+/*
+█ Make it 100% of parent (body{}).
+█ Include in itself the margins and paddings.
+█ Padding here might fuck up things. Don't.
+*/
+#background {
+    height: 100%;
+    width: 100%;
+    display: flex;
+
+    box-sizing: border-box;
+
+    background-color: rgb(32, 32, 32);
+}
+
+/*
+█ So cute.
+*/
+.open-sans-font {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+}
+
+#over-background{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow: scroll;
+}
+
+.cardholder {
+    margin: auto;
+    width: 25vw;
+
+    box-sizing: border-box;
+    
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(194, 178, 105, 0.404);
+}
+
+.card {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(182, 179, 170, 0.404);
+}
+
+p {
+    color: wheat;
+}
+
+.bg-matrix {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+
+    overflow: hidden;
+    display: grid;
+    
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    
+    font-size: 2vw;
+    justify-content: center;
+    align-content: center;
+}
+
+.bg-matrix > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    transition:
+        color 0.5s,
+        text-shadow 0.5s;
+}
+
+
+.bg-matrix > span:nth-child(3n + 1) {
+    animation: smooth-pulse 17s ease-in-out infinite;
+}
+
+.bg-matrix > span:nth-child(3n + 2) {
+    animation: smooth-pulse 11s ease-in-out infinite;
+}
+
+.bg-matrix > span:nth-child(3n + 3) {
+    animation: smooth-pulse 9s ease-in-out infinite;
+}
+
+.bg-matrix > span:nth-child(7n + 5) {
+    animation: smooth-pulse 23s ease-in-out infinite;
+}
+
+.bg-matrix > span:nth-child(7n + 10) {
+    animation: smooth-pulse 13s ease-in-out infinite;
+}
+
+
+@keyframes smooth-pulse {
+    0%, 100% {
+        color: rgb(64, 64, 64);
+        text-shadow: 0 0 1vw rgb(64, 64, 64);
+    }
+    25% {
+        color: rgba(255, 105, 180, 1);
+        text-shadow:
+        0 0 1vw rgba(255, 105, 180, 1),
+        0 0 2vw rgba(255, 105, 180, 1);
+    }
+    75% {
+        color: rgba(255, 255, 255, 1);
+        text-shadow:
+        0 0 1vw rgba(255, 255, 255, 1),
+        0 0 2vw rgba(255, 255, 255, 1);
+    }
+}
