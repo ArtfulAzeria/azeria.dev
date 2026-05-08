@@ -46,16 +46,83 @@ body {
     height: 100%;
     width: 100%;
     display: flex;
-    overflow: scroll;
+    overflow: hidden;
+}
+
+.col-whoami {
+    width: 20vw;
+    max-width: 20vw;
+    border: 1px solid rgba(255, 235, 205, 0.1);
+    margin: 0vw 2.5vw;
+    display: flex;
+    
+    flex-direction: column;
+    
+    box-sizing: border-box;
+    
+    padding: 1vw;
+}
+
+.col-projects {
+    width: 35vw;
+    border: 1px solid rgba(255, 235, 205, 0.1);
+    
+    box-sizing: border-box;
+    margin: 0vw ;
+    display: flex;
+    box-sizing: border-box;
+    
+    padding: 0.6vw;
+    flex-direction: column;
+}
+
+.col-professional {
+    width: 35vw;
+    border: 1px solid rgba(255, 235, 205, 0.1);
+    
+    box-sizing: border-box;
+    margin: 0vw 2.5vw;
+    display: flex;
+    box-sizing: border-box;
+    
+    padding: 0.6vw;
+    
+    flex-direction: column;
+}
+
+.main-avatar {
+    width: 80%;
+    height: min-content;
+    align-self: center;
+    
+
+    user-select: none;
+    pointer-events: none;
+    border: 0.3vw solid blanchedalmond;
+    box-sizing: border-box;
+    border-radius: 100%;
+    
+    margin: 1vw;
+}
+
+.col-whoami > h1 {
+    color: blanchedalmond;
+    margin-top: 1vw;
+    font-size: 2vw;
+}
+
+.col-whoami > h2 {
+    color: blanchedalmond;
+    margin-top: 1vw;
+    font-size: 1vw;
+    font-weight: 700;
 }
 
 .cardholder {
-    margin: auto;
-    width: 25vw;
-
+    margin-bottom: 10px;
     box-sizing: border-box;
     
-    padding: 10px;
+    padding: 5px;
     border: 1px solid blanchedalmond;
     border-radius: 5px;
     
@@ -63,6 +130,7 @@ body {
 }
 
 .card {
+    margin: 5px;
     padding: 10px;
     border-radius: 5px;
     background-color: rgba(208, 188, 156, 0.4);
@@ -74,7 +142,7 @@ body {
     background-color: rgba(208, 188, 156, 0.45);
 }
 
-.card > h2 {
+.card > h3 {
     color: wheat
 }
 .card > p {
