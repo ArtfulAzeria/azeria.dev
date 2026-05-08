@@ -15,6 +15,10 @@ body {
     width: 100dvw;
 }
 
+html {
+    font-size: 14px;
+}
+
 /*
 █ Make it 100% of parent (body{}).
 █ Include in itself the margins and paddings.
@@ -203,7 +207,6 @@ body {
 p {
     color: wheat;
 }
-
 
 .bg-matrix {
     position: absolute;
