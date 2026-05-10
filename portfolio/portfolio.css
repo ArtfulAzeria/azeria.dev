@@ -1,3 +1,11 @@
+:root {
+    --onyx: #111111;
+    --golden-earth: #926c15;
+    --royal-gold: #ffcb05;
+    --champagne-mist: #f2e8cf;
+    --platinum: #ededed;
+}
+
 /*
 █ Fuck it, no hidden margin/padding anywhere.
 */
@@ -13,10 +21,11 @@
 body {
     height: 100dvh;
     width: 100dvw;
+    color: var(--champagne-mist);
 }
 
 html {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 /*
@@ -30,8 +39,7 @@ html {
     display: flex;
 
     box-sizing: border-box;
-
-    background-color: rgb(32, 32, 32);
+    
 }
 
 /*
@@ -53,23 +61,60 @@ html {
     overflow: hidden;
 }
 
-.col-whoami {
-    width: 20vw;
-    max-width: 20vw;
+.mutable-section {
     border: 1px solid rgba(255, 235, 205, 0.1);
-    margin: 0vw 2.5vw;
-    display: flex;
-    
-    flex-direction: column;
-    
     box-sizing: border-box;
+    width: 85vw;
+    overflow: scroll;
+    overflow-x: hidden;
+    scroll-snap-type: both mandatory;
+    scrollbar-width: none;
     
-    padding: 1vw;
 }
 
-.col-projects {
-    width: 35vw;
+#canvas-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: var(--onyx);
+}
+
+.permanent-section {
     border: 1px solid rgba(255, 235, 205, 0.1);
+    box-sizing: border-box;
+    width: 15vw;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 1vw;
+    background-color: var(--onyx);
+}
+
+.snap-tome {
+    height: 100vh;
+    scroll-snap-align: start;
+    scroll-margin: 0; 
+}
+
+.sub-section {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.sub-section-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.col-whoami {
+    
+}
+
+.sub-section-col {
+    width: 45%;
     
     box-sizing: border-box;
     margin: 0vw ;
@@ -80,46 +125,69 @@ html {
     flex-direction: column;
 }
 
-.col-professional {
-    width: 35vw;
-    border: 1px solid rgba(255, 235, 205, 0.1);
-    
-    box-sizing: border-box;
-    margin: 0vw 2.5vw;
-    display: flex;
-    box-sizing: border-box;
-    
-    padding: 0.6vw;
-    
-    flex-direction: column;
-}
-
 .main-avatar {
-    width: 80%;
-    height: min-content;
+    width: 100%;
     align-self: center;
+    box-sizing: border-box;
     
-
+    
     user-select: none;
     pointer-events: none;
+    
     border: 0.3vw solid blanchedalmond;
-    box-sizing: border-box;
     border-radius: 100%;
     
-    margin: 1vw;
 }
 
-.col-whoami > h1 {
+.contact-box {
+    display: flex;
+    flex-direction: row;
+    font-size: 1vw;
+    margin-top: 0.5rem;
+}
+
+.contact-box > i {
+    color: blanchedalmond;
+}
+
+.contact-box > a {
+    text-decoration: none;
+    color: blanchedalmond;
+    margin-left: 0.5vw;
+}
+
+.contact-box > sup {
+    margin-left: 0.25vw;
+    text-decoration: none;
+    color: rgb(100, 100, 100);
+}
+
+.main-quote {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--royal-gold);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-shadow:
+    0px 0px 4px var(--onyx),
+    0px 0px 4px var(--platinum),
+    0px 0px 8px var(--royal-gold),
+    0px 0px 10px var(--golden-earth);
+    width: 100%;
+    height: 100%;
+}
+
+.permanent-section > h1 {
     color: blanchedalmond;
     margin-top: 1vw;
     font-size: 2vw;
 }
 
-.col-whoami > h2 {
+.permanent-section > h2 {
     color: blanchedalmond;
     margin-top: 1vw;
-    font-size: 1vw;
-    font-weight: 700;
+    font-size: 1.25vw;
 }
 
 .cardholder {
@@ -127,7 +195,7 @@ html {
     box-sizing: border-box;
     
     padding: 5px;
-    border: 1px solid blanchedalmond;
+    border: 1px solid var(--golden-earth);
     border-radius: 5px;
     
     
@@ -137,20 +205,21 @@ html {
     margin: 5px;
     padding: 10px;
     border-radius: 5px;
-    background-color: rgba(208, 188, 156, 0.4);
+    background-color: rgb(from var(--golden-earth) r g b / 0.4);
     
     transition: 0.2s;
 }
 
 .card:hover {
-    background-color: rgba(208, 188, 156, 0.45);
+    background-color: rgb(from var(--golden-earth) r g b / 0.475);
 }
 
 .card > h3 {
-    color: wheat
+    color: var(--champagne-mist)
 }
-.card > p {
+.card-descriptor {
     text-align: justify;
+    font-size: 0.9rem;
 }
 
 .tech-container {
@@ -204,74 +273,3 @@ html {
     color: wheat;
 }
 
-p {
-    color: wheat;
-}
-
-.bg-matrix {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    
-
-    overflow: hidden;
-    display: grid;
-    
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    
-    font-size: 2vw;
-    justify-content: center;
-    align-content: center;
-}
-
-.bg-matrix > span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-    transition:
-        color 0.5s,
-        text-shadow 0.5s;
-}
-
-
-.bg-matrix > span:nth-child(3n + 1) {
-    animation: smooth-pulse 17s ease-in-out infinite;
-}
-
-.bg-matrix > span:nth-child(3n + 2) {
-    animation: smooth-pulse 11s ease-in-out infinite;
-}
-
-.bg-matrix > span:nth-child(3n + 3) {
-    animation: smooth-pulse 9s ease-in-out infinite;
-}
-
-.bg-matrix > span:nth-child(7n + 5) {
-    animation: smooth-pulse 23s ease-in-out infinite;
-}
-
-.bg-matrix > span:nth-child(7n + 10) {
-    animation: smooth-pulse 13s ease-in-out infinite;
-}
-
-
-@keyframes smooth-pulse {
-    0%, 100% {
-        color: rgb(64, 64, 64);
-        text-shadow: 0 0 1vw rgb(64, 64, 64);
-    }
-    25% {
-        color: rgba(255, 105, 180, 1);
-        text-shadow:
-        0 0 1vw rgba(255, 105, 180, 1),
-        0 0 2vw rgba(255, 105, 180, 1);
-    }
-    75% {
-        color: rgba(255, 255, 255, 1);
-        text-shadow:
-        0 0 1vw rgba(255, 255, 255, 1),
-        0 0 2vw rgba(255, 255, 255, 1);
-    }
-}
