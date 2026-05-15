@@ -22,6 +22,7 @@ body {
     height: 100dvh;
     width: 100dvw;
     color: var(--champagne-mist);
+
 }
 
 html {
@@ -39,7 +40,6 @@ html {
     display: flex;
 
     box-sizing: border-box;
-    
 }
 
 /*
@@ -58,7 +58,6 @@ html {
     height: 100%;
     width: 100%;
     display: flex;
-    overflow: hidden;
 }
 
 .mutable-section {
@@ -72,10 +71,18 @@ html {
     
 }
 
+.canvas-wrap {
+    display: flex;
+    background-color: var(--onyx);
+    
+}
+
 #canvas-particles {
     position: absolute;
+    
     width: 100%;
     height: 100%;
+    
     z-index: -1;
     background-color: var(--onyx);
 }
@@ -89,7 +96,64 @@ html {
     flex-direction: column;
 
     padding: 1vw;
+    
     background-color: var(--onyx);
+}
+
+.main-quote-card {
+    padding: 2rem;
+    border-radius: 5px;
+    
+    background-color: rgb(from var(--royal-gold) r g b / 0.02);
+
+    
+    backdrop-filter: blur(5px);
+}
+
+.main-quote {
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.main-quote-card {
+    color: transparent;
+    animation: heyThere 1000ms;
+    animation-fill-mode: forwards;
+}
+
+.main-quote-card:nth-child(1) {
+    animation-delay: 1000ms;
+}
+.main-quote-card:nth-child(2) {
+    animation-delay: 3000ms;
+}
+.main-alts:nth-child(3) {
+    animation-delay: 500ms;
+}
+.main-alts:nth-child(4) {
+    animation-delay: 700ms;
+}
+.main-alts:nth-child(5) {
+    animation-delay: 900ms;
+}
+.main-alts:nth-child(6) {
+    animation-delay: 1100ms;
+}
+.main-alts:nth-child(7) {
+    animation-delay: 1300ms;
+}
+.main-alts:nth-child(8) {
+    animation-delay: 1500ms;
+}
+
+@keyframes heyThere {
+    0% {color: transparent;}
+    100% {color: red;}
 }
 
 .snap-tome {
@@ -109,8 +173,8 @@ html {
     justify-content: space-evenly;
 }
 
-.col-whoami {
-    
+.sub-section-title {
+    margin-bottom: 1rem;
 }
 
 .sub-section-col {
@@ -162,21 +226,7 @@ html {
     color: rgb(100, 100, 100);
 }
 
-.main-quote {
-    font-size: 4rem;
-    font-weight: 800;
-    color: var(--royal-gold);
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    text-shadow:
-    0px 0px 4px var(--onyx),
-    0px 0px 4px var(--platinum),
-    0px 0px 8px var(--royal-gold),
-    0px 0px 10px var(--golden-earth);
-    width: 100%;
-    height: 100%;
-}
+
 
 .permanent-section > h1 {
     color: blanchedalmond;
@@ -198,7 +248,7 @@ html {
     border: 1px solid var(--golden-earth);
     border-radius: 5px;
     
-    
+    backdrop-filter: blur(3px);
 }
 
 .card {
