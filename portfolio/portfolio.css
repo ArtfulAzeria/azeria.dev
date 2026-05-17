@@ -120,40 +120,19 @@ html {
     height: 100%;
 }
 
-.main-quote-card {
-    color: transparent;
-    animation: heyThere 1000ms;
-    animation-fill-mode: forwards;
-}
+#main-alts {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 4px;
 
-.main-quote-card:nth-child(1) {
-    animation-delay: 1000ms;
-}
-.main-quote-card:nth-child(2) {
-    animation-delay: 3000ms;
-}
-.main-alts:nth-child(3) {
-    animation-delay: 500ms;
-}
-.main-alts:nth-child(4) {
-    animation-delay: 700ms;
-}
-.main-alts:nth-child(5) {
-    animation-delay: 900ms;
-}
-.main-alts:nth-child(6) {
-    animation-delay: 1100ms;
-}
-.main-alts:nth-child(7) {
-    animation-delay: 1300ms;
-}
-.main-alts:nth-child(8) {
-    animation-delay: 1500ms;
-}
+    display: flex;
+    
+    border-radius: 4px;
 
-@keyframes heyThere {
-    0% {color: transparent;}
-    100% {color: red;}
+    text-wrap: nowrap;
+    user-select: none;
+
+    transition: 0.2s;
 }
 
 .snap-tome {
