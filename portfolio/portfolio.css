@@ -111,7 +111,7 @@ html {
     background-color: rgba(from var(--royal-gold) r g b / 0.02);
 
     
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(3px);
 }
 
 .main-quote {
@@ -166,12 +166,11 @@ html {
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 #main-alts-cube {
     box-sizing: border-box;
-    width: 8em;
     height: var(--cube-height);
     perspective: 2000px;
 }
@@ -187,16 +186,14 @@ html {
     backface-visibility: hidden;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     position: absolute;
-    width: 8em;
+    margin-left: 0.5em;
+    width: 100%;
+    /* border: 1px solid gold; */
     height: var(--cube-height);
-    border: 1px solid rgba(from var(--golden-earth) r g b / 0.475);
-    background: rgba(from var(--golden-earth) r g b / 0.4);
     color: rgba(from var(--royal-gold) r g b / 0.75);
-    p {
-        font-size: 0.8em;
-    }
+    
 }
 
 .cube-face-front {
