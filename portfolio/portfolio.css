@@ -1,9 +1,12 @@
 :root {
     --onyx: #111111;
     --golden-earth: #926c15;
+    --eternal-gold: #443512;
     --royal-gold: #ffcb05;
     --champagne-mist: #f2e8cf;
     --platinum: #ededed;
+
+    --cube-height: 1.25em;
 }
 
 /*
@@ -103,8 +106,9 @@ html {
 .main-quote-card {
     padding: 2rem;
     border-radius: 5px;
+    width: 15em;
     
-    background-color: rgb(from var(--royal-gold) r g b / 0.02);
+    background-color: rgba(from var(--royal-gold) r g b / 0.02);
 
     
     backdrop-filter: blur(5px);
@@ -118,9 +122,10 @@ html {
     justify-content: center;
     width: 100%;
     height: 100%;
+    
 }
 
-#main-alts {
+.main-alts {
     background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 4px;
@@ -132,7 +137,83 @@ html {
     text-wrap: nowrap;
     user-select: none;
 
-    transition: 0.2s;
+    transition: 1s;
+}
+
+@keyframes spin {
+    0%, 20% {
+        transform: rotateX(0deg);
+    }
+
+    25%, 45% {
+        transform: rotateX(-90deg);
+    }
+
+    50%, 70% {
+        transform: rotateX(-180deg);
+    }
+
+    75%, 95% {
+        transform: rotateX(-270deg);
+    }
+
+    100% {
+        transform: rotateX(-360deg);
+    }
+}
+
+.inline-cube {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#main-alts-cube {
+    box-sizing: border-box;
+    width: 8em;
+    height: var(--cube-height);
+    perspective: 2000px;
+}
+
+.cube {
+    width: 8em;
+    height: var(--cube-height);
+    transform-style: preserve-3d;
+    animation: spin 10s linear infinite;
+}
+
+.cube-face {
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 8em;
+    height: var(--cube-height);
+    border: 1px solid rgba(from var(--golden-earth) r g b / 0.475);
+    background: rgba(from var(--golden-earth) r g b / 0.4);
+    color: rgba(from var(--royal-gold) r g b / 0.75);
+    p {
+        font-size: 0.8em;
+    }
+}
+
+.cube-face-front {
+    transform: rotateX(0deg) translateZ(calc(var(--cube-height) / 2));
+}
+
+.cube-face-top {
+    transform: rotateX(90deg) translateZ(calc(var(--cube-height) / 2));
+}
+
+.cube-face-back {
+    transform: rotateX(180deg) translateZ(calc(var(--cube-height) / 2));
+}
+
+
+.cube-face-bottom {
+    transform: rotateX(270deg) translateZ(calc(var(--cube-height) / 2));
 }
 
 .snap-tome {
@@ -234,13 +315,13 @@ html {
     margin: 5px;
     padding: 10px;
     border-radius: 5px;
-    background-color: rgb(from var(--golden-earth) r g b / 0.4);
+    background-color: rgba(from var(--golden-earth) r g b / 0.4);
     
     transition: 0.2s;
 }
 
 .card:hover {
-    background-color: rgb(from var(--golden-earth) r g b / 0.475);
+    background-color: rgba(from var(--golden-earth) r g b / 0.475);
 }
 
 .card > h3 {
