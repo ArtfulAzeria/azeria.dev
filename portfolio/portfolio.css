@@ -1,7 +1,9 @@
 :root {
     --onyx: #111111;
-    --golden-earth: #926c15;
     --eternal-gold: #443512;
+    --golden-dusk: #574a2a;
+    --gold-soul: #745714;
+    --golden-earth: #926c15;
     --royal-gold: #ffcb05;
     --champagne-mist: #f2e8cf;
     --platinum: #ededed;
@@ -11,37 +13,11 @@
 
 /*
 █ Fuck it, no hidden margin/padding anywhere.
+█ Include in the margins and paddings in the items themselves.
 */
 * {
     margin: 0;
     padding: 0;
-}
-
-/*
-█ Full dynamic-viewport so it has all the screen on every device.
-█ Stupid mobile viewport substandart.
-*/
-body {
-    height: 100dvh;
-    width: 100dvw;
-    color: var(--champagne-mist);
-
-}
-
-html {
-    font-size: 16px;
-}
-
-/*
-█ Make it 100% of parent (body{}).
-█ Include in itself the margins and paddings.
-█ Padding here might fuck up things. Don't.
-*/
-#background {
-    height: 100%;
-    width: 100%;
-    display: flex;
-
     box-sizing: border-box;
 }
 
@@ -57,30 +33,44 @@ html {
     "wdth" 100;
 }
 
-#over-background{
+/*
+█ Full dynamic-viewport so it has all the screen on every device.
+█ Stupid mobile viewport substandart.
+*/
+body {
+    height: 100dvh;
+    width: 100dvw;
+    color: var(--champagne-mist);
+
+}
+
+/*
+█ Make it 100% of parent (body{}).
+█ This is the real bg, a single level over body.
+*/
+#underground {
     height: 100%;
     width: 100%;
     display: flex;
 }
 
-.mutable-section {
-    border: 1px solid rgba(255, 235, 205, 0.1);
-    box-sizing: border-box;
-    width: 85vw;
-    overflow: scroll;
-    overflow-x: hidden;
-    scroll-snap-type: both mandatory;
-    scrollbar-width: none;
-    
-}
-
-.canvas-wrap {
+/*
+█ This is the bg a level over undeground.
+█ In paralel with whatever the bakground is.
+█ If something overflows the side, don't.
+*/
+#background{
+    height: 100%;
+    width: 100%;
     display: flex;
-    background-color: var(--onyx);
-    
+    flex-direction: column;
+    overflow: scroll;
 }
 
-#canvas-particles {
+/*
+█ This the ever on whatever the bakground is.
+*/
+#particle-background {
     position: absolute;
     
     width: 100%;
@@ -90,54 +80,76 @@ html {
     background-color: var(--onyx);
 }
 
-.permanent-section {
-    border: 1px solid rgba(255, 235, 205, 0.1);
-    box-sizing: border-box;
-    width: 15vw;
-
+#main-section {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    min-width: 100%;
+}
 
-    padding: 1vw;
-    
+#logo-section {
+    width: 80%;
+    max-width: 20em;
+    aspect-ratio: cos(30deg);
+}
+
+#main-avatar-outer-border {
+    height: 100%;
+    background-color: var(--gold-soul);
+}
+
+#main-avatar-inter-border {
+    height: 98%;
     background-color: var(--onyx);
 }
 
-.main-quote-card {
-    padding: 2rem;
-    border-radius: 5px;
-    width: 15em;
-    
-    background-color: rgba(from var(--royal-gold) r g b / 0.02);
-
-    
-    backdrop-filter: blur(3px);
+#main-avatar-inner-border {
+    height: 97%;
+    background-color: var(--gold-soul);
 }
 
-.main-quote {
-    font-size: 2rem;
-    font-weight: 800;
-    text-align: center;
+#main-avatar {
+    height: 98%;
+    object-fit: cover;
+}
+
+.hexagon {
+    aspect-ratio: cos(30deg);
+    clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
+
+    /*
+    █ This bad boys are here just for accesibility.
+    █ If img fails, alt needs to be visible.
+    █ If not centered, clip-path fucks it.
+    */
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
-    
+    text-align: center;
 }
 
-.main-alts {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 4px;
-
-    display: flex;
+.main-quote-card {
+    padding: 1rem;
+    width: 80%;
+    max-width: 20em;
+    height: 6em;
     
-    border-radius: 4px;
+    border-radius: 5px;
+    
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(3px);
+    
+    text-align: center;
 
-    text-wrap: nowrap;
-    user-select: none;
+    align-content: center;
 
-    transition: 1s;
+    font-weight: 800;
 }
 
 @keyframes spin {
@@ -162,38 +174,40 @@ html {
     }
 }
 
-.inline-cube {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-}
-
-#main-alts-cube {
-    box-sizing: border-box;
-    height: var(--cube-height);
-    perspective: 2000px;
+.main-quote-card > p {
+    display: inline;
+    vertical-align: middle;
 }
 
 .cube {
-    width: 8em;
+    display: inline-block;
+
+    width: 7em;
     height: var(--cube-height);
     transform-style: preserve-3d;
     animation: spin 10s linear infinite;
+    
+    margin: 0 auto;
+    vertical-align: middle;
 }
 
 .cube-face {
     backface-visibility: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: start;
     position: absolute;
-    margin-left: 0.5em;
     width: 100%;
-    /* border: 1px solid gold; */
     height: var(--cube-height);
     color: rgba(from var(--royal-gold) r g b / 0.75);
     
+    background-color: rgba(from var(--royal-gold) r g b / 0.025);
+    border-top: 1px solid rgba(from var(--royal-gold) r g b / 0.25);
+    border-bottom: 1px solid rgba(from var(--royal-gold) r g b / 0.25);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    box-sizing: content-box;
+    padding: 0 0.25em;
 }
 
 .cube-face-front {
@@ -213,98 +227,60 @@ html {
     transform: rotateX(270deg) translateZ(calc(var(--cube-height) / 2));
 }
 
-.snap-tome {
-    height: 100vh;
-    scroll-snap-align: start;
-    scroll-margin: 0; 
-}
-
 .sub-section {
-    overflow: hidden;
-    height: 100%;
+    display: flex;
+
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
     width: 100%;
+    min-width: 100%;
+
+    max-height: fit-content;
+
+    flex-wrap: wrap;
 }
 
-.sub-section-container {
+.columnable {
     display: flex;
-    justify-content: space-evenly;
-    
-    max-height: 100%; /* Enables scrolling in .sub-section-col */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    min-width: 100%;
+
+    padding: 1em;
 }
+
+@media only screen and (min-width: 1000px) {
+    .sub-section {
+        padding: 1em;
+    }
+
+    .columnable {
+        width: 50%;
+        min-width: 50%;
+    }
+}
+
+
 
 .sub-section-title {
-    margin-bottom: 1rem;
-}
-
-.sub-section-col {
-    width: 45%;
-    
-    box-sizing: border-box;
-    margin: 0vw ;
-    display: flex;
-    box-sizing: border-box;
-    
-    padding: 0.6vw;
-    flex-direction: column;
-
-    overflow: scroll;
-}
-
-.main-avatar {
-    width: 100%;
-    align-self: center;
-    box-sizing: border-box;
-    
-    
-    user-select: none;
-    pointer-events: none;
-    
-    border: 0.3vw solid blanchedalmond;
-    border-radius: 100%;
-    
-}
-
-.contact-box {
-    display: flex;
-    flex-direction: row;
-    font-size: 1vw;
-    margin-top: 0.5rem;
-}
-
-.contact-box > i {
-    color: blanchedalmond;
-}
-
-.contact-box > a {
-    text-decoration: none;
-    color: blanchedalmond;
-    margin-left: 0.5vw;
-}
-
-.contact-box > sup {
-    margin-left: 0.25vw;
-    text-decoration: none;
-    color: rgb(100, 100, 100);
-}
-
-
-
-.permanent-section > h1 {
-    color: blanchedalmond;
-    margin-top: 1vw;
-    font-size: 2vw;
-}
-
-.permanent-section > h2 {
-    color: blanchedalmond;
-    margin-top: 1vw;
-    font-size: 1.25vw;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    border-radius: 5px;
+    margin-bottom: 1em;
+    padding: 0.25em;
+    font-size: 1.25em;
 }
 
 .cardholder {
     margin-bottom: 10px;
     box-sizing: border-box;
-    
+    width: 100%;
+    max-width: 1500px;
+
     padding: 5px;
     border: 1px solid var(--golden-earth);
     border-radius: 5px;
@@ -383,4 +359,92 @@ html {
     margin: 0px 2px;
     color: wheat;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.snap-tome {
+    height: 100vh;
+    scroll-snap-align: start;
+    scroll-margin: 0; 
+}
+
+
+
+.sub-section-container {
+    display: flex;
+    justify-content: space-evenly;
+    
+    max-height: 100%; /* Enables scrolling in .sub-section-col */
+}
+
+
+
+.sub-section-col {
+    width: 45%;
+    
+    box-sizing: border-box;
+    margin: 0vw ;
+    display: flex;
+    box-sizing: border-box;
+    
+    padding: 0.6vw;
+    flex-direction: column;
+
+    overflow: scroll;
+}
+
+
+
+.contact-box {
+    display: flex;
+    flex-direction: row;
+    font-size: 1vw;
+    margin-top: 0.5rem;
+}
+
+.contact-box > i {
+    color: blanchedalmond;
+}
+
+.contact-box > a {
+    text-decoration: none;
+    color: blanchedalmond;
+    margin-left: 0.5vw;
+}
+
+.contact-box > sup {
+    margin-left: 0.25vw;
+    text-decoration: none;
+    color: rgb(100, 100, 100);
+}
+
+
+
+.permanent-section > h1 {
+    color: blanchedalmond;
+    margin-top: 1vw;
+    font-size: 2vw;
+}
+
+.permanent-section > h2 {
+    color: blanchedalmond;
+    margin-top: 1vw;
+    font-size: 1.25vw;
+}
+
 

@@ -2,294 +2,169 @@
 <html lang="es">
 
 <head>
+    <!-- Boilerplate -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title -->
     <title>Azeria • Portfolio</title>
+
+    <!-- Resources -->
     <link rel="icon" type="image/x-icon" href="../resources/azeria-logo.ico">
     <link rel="stylesheet" href="portfolio.css">
-
+    
+    <!-- Font - Open Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
+    <!-- Icons -->
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
 <body>
-    
-    <div id="background" class="open-sans-font">  
-    
-        <div class="canvas-wrap">
-            <canvas id="canvas-particles"></canvas>
-        </div> 
-        <div id="over-background">
-            <div class="permanent-section">
-                
-                <img class="main-avatar" src="../resources/azeria-logo.png" alt="Logo de azeria">
-                <h1>Azeria</h1>
-                <hr>
-                <h2>Contáctame</h2>
-                <div class="contact-box">
-                    <i class="bi bi-envelope"></i>
-                    <a href="mailto:admin@azeria.dev">admin@azeria.dev</a>
-                </div>
-                <div class="contact-box">
-                    <i class="bi bi-bluesky"></i>
-                    <a href="https://bsky.app/profile/admin.azeria.dev">@admin.azeria.dev</a>
-                </div>
-                <div class="contact-box">
-                    <i class="bi bi-github"></i>
-                    <a href="https://github.com/ArtfulAzeria/">ArtfulAzeria</a>
-                </div>
-                <div class="contact-box">
-                    <i class="bi bi-wikipedia"></i>
-                    <a href="https://es.wikipedia.org/wiki/Usuario:CraftyAzeria">CraftyAzeria</a>
-                </div>
-                <h2>Skills</h2>
-            </div>
-            <div class="mutable-section">
-                
-                <div class="snap-tome">
-                    <div class="sub-section-00 sub-section">
-                        <div class="main-quote sub-section-container">
-                            <div class="main-quote-card">
-                                <p>Mi nombre es Azeria, y soy</p>
-                                <div class="inline-cube">
-                                    <p>tu próximo</p>
-                                    <div id="main-alts-cube">
-                                        <div class="cube">
-                                            <div class="cube-face cube-face-front"><p>Desarrollador</p></div>
-                                            <div class="cube-face cube-face-top"><p>Forense</p></div>
-                                            <div class="cube-face cube-face-back"><p>Diseñador</p></div>
-                                            <div class="cube-face cube-face-bottom"><p>Arquitecto</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="snap-tome">
-                    <div class="sub-section-01 sub-section">
-                        <div class="sub-section-container">
-                            <div class="sub-section-col">
-                                <h3 class="sub-section-title">Mis proyectos de código abierto</h3>
-                                <div class="cardholder">
-                                    <div class="card">
-                                        <h3>Página web de Azeria</h3>
-                                        <p class="card-descriptor">Diseño, desarrollo y despliegue. ¡El ciclo completo de la creación web! La página que estás viendo ha sido íntegramente creada por mi, y despleagada en los servidores de mi laboratorio.</p>
-                                        
-                                        <hr class="tech-hr">
-                                        <p class="tech-title">Habilidades y tecnologías involucradas</p>
-                                        <div class="tech-container">
-                                            <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
-                                            <div class="tech"> <i class="devicon-vscode-plain"></i><p>VSC</p></div>
-                                            <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
-                                            <div class="tech"><p>• • •</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cardholder">
-                                    <div class="card">
-                                        <h3>Aemet Avisa</h3>
-                                        <p class="card-descriptor">Los fenómenos naturales son una preocupación creciente. Este aplicativo genera un mapa de avisos meteorológicos activos basándose en los informes CAP que proporciona AEMET en tiempo real.</p>
-                                        
-                                        <hr class="tech-hr">
-                                        <p class="tech-title">Habilidades y tecnologías involucradas</p>
-                                        <div class="tech-container">
-                                            <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
-                                            <div class="tech"> <i class="devicon-vscode-plain"></i><p>VSC</p></div>
-                                            <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
-                                            <div class="tech"><p>• • •</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cardholder">
-                                    <div class="card">
-                                        <h3>Year Left</h3>
-                                        <p class="card-descriptor">La primera utilidad que desplegué en mi laboratorio, resiliente, continúa funcionando aún a día de hoy. Un bot que cada día crea un post en Bluesky diciendo los días que faltan para terminar el año.</p>
-                                        
-                                        <hr class="tech-hr">
-                                        <p class="tech-title">Habilidades y tecnologías involucradas</p>
-                                        <div class="tech-container">
-                                            <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
-                                            <div class="tech"> <i class="devicon-vscode-plain"></i><p>VSC</p></div>
-                                            <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
-                                            <div class="tech"><p>• • •</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sub-section-col">
-                                <h3 class="sub-section-title">Mis contribuciones de código abierto</h3>
-                                <div class="cardholder">
-                                    <div class="card">
-                                        <h3>Electricity maps</h3>
-                                        <p class="card-descriptor">Los gobiernos han ser responsables de sus políticas climáticas. Esta página permite a la ciudadanía a conocer las relaciones energéticas globales en tiempo real.</p>
-                                        
-                                        <hr class="tech-hr">
-                                        <p class="tech-title">Habilidades y tecnologías involucradas</p>
-                                        <div class="tech-container">
-                                            <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
-                                            <div class="tech"> <i class="devicon-vscode-plain"></i><p>VSC</p></div>
-                                            <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
-                                            <div class="tech"><p>• • •</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cardholder">
-                                    <div class="card">
-                                        <h3>Quartz</h3>
-                                        <p class="card-descriptor">¿Alguna vez has querido tener tu propio blog? ¡Quartz convierte tu caja fuerte de Obsidian en una página web lista para ser hosteada!</p>
-                                        
-                                        <hr class="tech-hr">
-                                        <p class="tech-title">Habilidades y tecnologías involucradas</p>
-                                        <div class="tech-container">
-                                            <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
-                                            <div class="tech"> <i class="devicon-vscode-plain"></i><p>VSC</p></div>
-                                            <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
-                                            <div class="tech"><p>• • •</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="snap-tome">
-                    <div class="sub-section-02 sub-section">
-                        <div class="sub-section-container">
-                            <div class="card">
+    <div id="underground" class="open-sans-font">
+
+        <!-- This is just the background, parallel to the content -->
+        <canvas id="particle-background"></canvas>
+        
+        <!-- Now, here is the content -->
+        <div id="background">
+
+            <div id="main-section">
+                <!-- Logo -->
+                <div id="logo-section">
+                    <div id="main-avatar-outer-border" class="hexagon">
+                        <div id="main-avatar-inter-border" class="hexagon">
+                            <div id="main-avatar-inner-border" class="hexagon">
+                                <img id="main-avatar" class="hexagon" src="../resources/azeria-logo-dark-gold.png" alt="Logo de Azeria">
                                 
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="snap-tome">
-                    <div class="sub-section-03 sub-section">
-                        <div class="sub-section-container">
-                            <div class="sub-section-col">
-                                <h3 class="sub-section-title">Experiencia laboral</h3>
-                                <div class="cardholder">
-                                    <div class="card">
-                                        <h3>DevOps</h3>
-                                        <p class="card-descriptor">Desarrollo y mantenimiento para un cliente globalmente reconocido en el sector de la banca. Trabajando en remoto junto con un amplio equipo de Madrid.</p>
-                                        
-                                        <hr class="tech-hr">
-                                        <p class="tech-title">Habilidades y tecnologías involucradas</p>
-                                        <div class="tech-container">
-                                            <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
-                                            <div class="tech"> <i class="devicon-vscode-plain"></i><p>VSC</p></div>
-                                            <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
-                                            <div class="tech"><p>• • •</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cardholder">
-                                    <div class="card">
-                                        <h3>Backend Dev</h3>
-                                        <p class="card-descriptor">Desarrollo y mantenimiento en un gran proyecto multidisciplinar, resolviendo tickets de incidencias y creando nuevas funcionalidades en su API.</p>
-                                        
-                                        <hr class="tech-hr">
-                                        <p class="tech-title">Habilidades y tecnologías involucradas</p>
-                                        <div class="tech-container">
-                                            <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
-                                            <div class="tech"> <i class="devicon-vscode-plain"></i><p>VSC</p></div>
-                                            <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
-                                            <div class="tech"><p>• • •</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cardholder">
-                                    <div class="card">
-                                        <h3>DevSecOps</h3>
-                                        <p class="card-descriptor">Desarrollo, testing, y configruación de sistemas en una gran firma de consultoría de alcance internacional.</p>
-                                        
-                                        <hr class="tech-hr">
-                                        <p class="tech-title">Habilidades y tecnologías involucradas</p>
-                                        <div class="tech-container">
-                                            <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
-                                            <div class="tech"> <i class="devicon-vscode-plain"></i><p>VSC</p></div>
-                                            <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
-                                            <div class="tech"><p>• • •</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cardholder">
-                                    <div class="card">
-                                        <h3>FullStack Dev</h3>
-                                        <p class="card-descriptor">Actualización del sistema y contenido de los servidores de una empresa local haciendo uso de su CMS y un stack de tecnologías popular.</p>
-                                        
-                                        <hr class="tech-hr">
-                                        <p class="tech-title">Habilidades y tecnologías involucradas</p>
-                                        <div class="tech-container">
-                                            <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
-                                            <div class="tech"> <i class="devicon-vscode-plain"></i><p>VSC</p></div>
-                                            <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
-                                            <div class="tech"><p>• • •</p></div>
-                                        </div>
-                                    </div>
-                                </div>
+                <!-- Presentation -->
+                <div class="main-quote-card">
+                    <p>Mi nombre es Azeria, y soy tu próximo</p>
+                    <div class="cube">
+                        <div class="cube-face cube-face-front"><p>Desarrollador</p></div>
+                        <div class="cube-face cube-face-top"><p>Forense</p></div>
+                        <div class="cube-face cube-face-back"><p>Diseñador</p></div>
+                        <div class="cube-face cube-face-bottom"><p>Arquitecto</p></div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="sub-section">
+                <div class="columnable">
+                    <h3 class="sub-section-title">Mis proyectos de código abierto</h3>
+                    <div class="cardholder">
+                        <div class="card">
+                            <h3>Página web de Azeria</h3>
+                            <p class="card-descriptor">Diseño, desarrollo y despliegue. ¡El ciclo completo de la creación web! La página que estás viendo ha sido íntegramente creada por mi, y despleagada en los servidores de mi laboratorio.</p>
+                            
+                            <hr class="tech-hr">
+                            <p class="tech-title">Habilidades y tecnologías involucradas</p>
+                            <div class="tech-container">
+                                <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
+                                <div class="tech"> <i class="devicon-vscode-plain"></i><p>VSC</p></div>
+                                <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
+                                <div class="tech"><p>• • •</p></div>
                             </div>
-                            <div class="sub-section-col">
-                                <h3 class="sub-section-title">Estudios cursados</h3>
-                                <div class="cardholder">
-                                    <div class="card">
-                                        <h3>Ciberseguridad</h3>
-                                        <p class="card-descriptor">Donde me he formado en conocimientos como análisis forense informático, bastionado de redes y sistemas, hackeo ético, aplicación normativa, y mucho más.</p>
-                                        
-                                        <hr class="tech-hr">
-                                        <p class="tech-title">Habilidades y tecnologías involucradas</p>
-                                        <div class="tech-container">
-                                            <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
-                                            <div class="tech"> <i class="devicon-vscode-plain"></i><p>VSC</p></div>
-                                            <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
-                                            <div class="tech"><p>• • •</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cardholder">
-                                    <div class="card">
-                                        <h3>Desarrollo de aplicaciones</h3>
-                                        <p class="card-descriptor">Donde he aprendido cuestiones como diseño, desarrollo en múltiples lenguajes de programación, bases de datos, despliegue, configuración de sistemas, y mucho más.</p>
-                                        
-                                        <hr class="tech-hr">
-                                        <p class="tech-title">Habilidades y tecnologías involucradas</p>
-                                        <div class="tech-container">
-                                            <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
-                                            <div class="tech"> <i class="devicon-vscode-plain"></i><p>VSC</p></div>
-                                            <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
-                                            <div class="tech"><p>• • •</p></div>
-                                        </div>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="cardholder">
+                        <div class="card">
+                            <h3>Aemet Avisa</h3>
+                            <p class="card-descriptor">Los fenómenos naturales son una preocupación creciente. Este aplicativo genera un mapa de avisos meteorológicos activos basándose en los informes CAP que proporciona AEMET en tiempo real.</p>
+                            
+                            <hr class="tech-hr">
+                            <p class="tech-title">Habilidades y tecnologías involucradas</p>
+                            <div class="tech-container">
+                                <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
+                                <div class="tech"> <i class="devicon-vscode-plain"></i><p>VSC</p></div>
+                                <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
+                                <div class="tech"><p>• • •</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardholder">
+                        <div class="card">
+                            <h3>Year Left</h3>
+                            <p class="card-descriptor">La primera utilidad que desplegué en mi laboratorio, resiliente, continúa funcionando aún a día de hoy. Un bot que cada día crea un post en Bluesky diciendo los días que faltan para terminar el año.</p>
+                            
+                            <hr class="tech-hr">
+                            <p class="tech-title">Habilidades y tecnologías involucradas</p>
+                            <div class="tech-container">
+                                <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
+                                <div class="tech"> <i class="devicon-vscode-plain"></i><p>VSC</p></div>
+                                <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
+                                <div class="tech"><p>• • •</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columnable">
+                    <h3 class="sub-section-title">Mis contribuciones de código abierto</h3>
+                    <div class="cardholder">
+                        <div class="card">
+                            <h3>Electricity maps</h3>
+                            <p class="card-descriptor">Los gobiernos han ser responsables de sus políticas climáticas. Esta página permite a la ciudadanía a conocer las relaciones energéticas globales en tiempo real.</p>
+                            
+                            <hr class="tech-hr">
+                            <p class="tech-title">Habilidades y tecnologías involucradas</p>
+                            <div class="tech-container">
+                                <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
+                                <div class="tech"> <i class="devicon-vscode-plain"></i><p>VSC</p></div>
+                                <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
+                                <div class="tech"><p>• • •</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardholder">
+                        <div class="card">
+                            <h3>Quartz</h3>
+                            <p class="card-descriptor">¿Alguna vez has querido tener tu propio blog? ¡Quartz convierte tu caja fuerte de Obsidian en una página web lista para ser hosteada!</p>
+                            
+                            <hr class="tech-hr">
+                            <p class="tech-title">Habilidades y tecnologías involucradas</p>
+                            <div class="tech-container">
+                                <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
+                                <div class="tech"> <i class="devicon-vscode-plain"></i><p>VSC</p></div>
+                                <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
+                                <div class="tech"><p>• • •</p></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
+
     </div>
     
+
+    <!-- This loads the background and its configuration -->
     <script src="https://cdn.jsdelivr.net/npm/canvasparticles-js/dist/index.umd.js"></script>
     <script>
-        const selector = '#canvas-particles'
+        const selector = '#particle-background'
         const options = {
-        
-        mouse: {
-            interactionType: CanvasParticles.interactionType.NONE,
-        },
-        particles: {
-            color: 'rgba(146, 108, 21, 0.4)',
-            max: 200,
-            relSpeed: 0.1,
-            ppm: 250,
-            max: 250,
-        },
+            mouse: {
+                interactionType: CanvasParticles.interactionType.NONE,
+            },
+            particles: {
+                color: 'rgba(146, 108, 21, 0.4)',
+                relSpeed: 0.15,
+                ppm: 350,
+                max: 350,
+            },
         }
         new CanvasParticles(selector, options).start()
     </script>
+
+    <!-- Why the fuck would you want more JS? Man. -->
     <script src="portfolio.js"></script> 
 </body>
 
