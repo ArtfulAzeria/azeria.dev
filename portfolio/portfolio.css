@@ -81,6 +81,7 @@ body {
 }
 
 #main-section {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -89,6 +90,9 @@ body {
     min-width: 100%;
 }
 
+/*
+█ Maths yay!
+*/
 #logo-section {
     width: 80%;
     max-width: 20em;
@@ -101,6 +105,10 @@ body {
     background-color: var(--gold-soul);
 }
 
+/*
+█ There are some interesting maths in this percentages.
+█ Maths that I'm not doing.
+*/
 #main-avatar-inter-border {
     height: 98%;
     background-color: var(--onyx);
@@ -119,6 +127,8 @@ body {
 .hexagon {
     aspect-ratio: cos(30deg);
     clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
+    pointer-events: none;
+    user-select: none;
 
     /*
     █ This bad boys are here just for accesibility.
@@ -150,6 +160,47 @@ body {
     align-content: center;
 
     font-weight: 800;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5em;
+    width: 80%;
+    max-width: 20em;
+    height: 6em;
+    
+    justify-content: space-evenly;
+}
+
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1em;
+
+    height: 3em;
+    width: 3em;
+
+    backdrop-filter: blur(3px);
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+
+    text-decoration: none;
+    color: blanchedalmond;
+    transition: 0.4s;
+}
+
+.contact-box > a {
+    user-select: none;
+}
+
+.contact-box:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 @keyframes spin {
@@ -287,7 +338,6 @@ body {
 
 .cardholder {
     margin-bottom: 10px;
-    box-sizing: border-box;
     width: 100%;
     max-width: 800px;
 
@@ -321,6 +371,7 @@ body {
 
 .tech-container {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .tech-hr {
@@ -328,14 +379,10 @@ body {
     margin: 5px 0px;
 }
 
-.tech:not(:first-child) {
-    margin-left: 5px;
-}
-
 .tech-title {
     font-size: 0.6rem;
     color: rgba(255, 255, 255, 0.4);
-    margin-bottom: 2px;
+    margin: 2px;
 }
 
 .tech {
@@ -350,14 +397,18 @@ body {
     text-wrap: nowrap;
     user-select: none;
 
+    margin: 2px;
+
     transition: 0.2s;
 }
 
+/*
 .tech:hover {
     background-color: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.25);
     cursor: pointer;
 }
+*/
 
 .tech > p {
     font-size: 0.75rem;
@@ -370,91 +421,81 @@ body {
     color: wheat;
 }
 
+.tech-popup {
+    position: absolute;
+    z-index: 2;
 
+    height: 100%;
+    width: 100%;
+    left: -2px;
+    top: 0;
 
+    border-radius: 5px;
+    background-color: rgba(from var(--onyx) r g b / 0.95);
+    backdrop-filter: blur(3px);
 
+    
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.15s, opacity 0.15s linear;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.snap-tome {
-    height: 100vh;
-    scroll-snap-align: start;
-    scroll-margin: 0; 
-}
-
-
-
-.sub-section-container {
+    padding: 1em;
     display: flex;
-    justify-content: space-evenly;
-    
-    max-height: 100%; /* Enables scrolling in .sub-section-col */
-}
-
-
-
-.sub-section-col {
-    width: 45%;
-    
-    box-sizing: border-box;
-    margin: 0vw ;
-    display: flex;
-    box-sizing: border-box;
-    
-    padding: 0.6vw;
-    flex-direction: column;
-
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
     overflow: scroll;
 }
 
+.tech-popup > p {
+    text-wrap: wrap;
+    text-align: justify;
+    margin: 2px;
+}
 
-
-.contact-box {
+.popup-togle {
+    cursor: pointer;
     display: flex;
-    flex-direction: row;
-    font-size: 1vw;
-    margin-top: 0.5rem;
+    justify-content: center;
+    align-items: center;
 }
 
-.contact-box > i {
-    color: blanchedalmond;
+.fuck-off {
+    display: none;
 }
 
-.contact-box > a {
-    text-decoration: none;
-    color: blanchedalmond;
-    margin-left: 0.5vw;
+input[type=checkbox]:checked ~ .tech-popup {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.15s linear;
 }
 
-.contact-box > sup {
-    margin-left: 0.25vw;
-    text-decoration: none;
-    color: rgb(100, 100, 100);
+.tech-square {
+    margin: 2px;
+    padding: 4px;
+    font-size: 0.75em;
+
+    background-color: rgba(from var(--eternal-gold) r g b / 0.95);
+    border: 1px solid rgba(from var(--gold-soul) r g b / 0.95);
+    border-radius: 4px;
+    height: fit-content;
+    width: fit-content;
+
+    font-weight: 700;
+    color: var(--champagne-mist);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-wrap: nowrap;
+    user-select: none;
 }
 
-
-
-.permanent-section > h1 {
-    color: blanchedalmond;
-    margin-top: 1vw;
-    font-size: 2vw;
-}
-
-.permanent-section > h2 {
-    color: blanchedalmond;
-    margin-top: 1vw;
-    font-size: 1.25vw;
+.tech-square > * {
+    align-self: center;
+    margin: 0px 2px;
+    color: wheat;
 }
 
 
