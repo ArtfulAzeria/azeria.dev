@@ -1,12 +1,14 @@
 :root {
-    --onyx: #111111;
+    --onyx: #060606;
     --eternal-gold: #443512;
     --golden-dusk: #574a2a;
     --gold-soul: #745714;
     --golden-earth: #926c15;
-    --royal-gold: #ffcb05;
+    --royal-gold: #ffcb05; 
+    --new-gold: #ffe000;
     --champagne-mist: #f2e8cf;
     --platinum: #ededed;
+    
 
     --cube-height: 1.25em;
 }
@@ -342,17 +344,20 @@ body {
     max-width: 800px;
 
     padding: 5px;
-    border: 1px solid var(--golden-earth);
+    border: 1px solid rgba(from #ffff00 r g b / 0.4);
     border-radius: 5px;
     
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(5px);
+
+    text-decoration: none;
+    color: blanchedalmond;
 }
 
 .card {
     margin: 5px;
     padding: 10px;
     border-radius: 5px;
-    background-color: rgba(from var(--golden-earth) r g b / 0.4);
+    background-color: rgba(from var(--new-gold) r g b / 0.05);
     
     transition: 0.2s;
 }
