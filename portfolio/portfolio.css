@@ -1,14 +1,41 @@
 :root {
-    --onyx: #060606;
     --eternal-gold: #443512;
     --golden-dusk: #574a2a;
     --gold-soul: #745714;
     --golden-earth: #926c15;
     --royal-gold: #ffcb05; 
-    --new-gold: #ffe000;
-    --champagne-mist: #f2e8cf;
+
+
+
+
     --platinum: #ededed;
+    --onyx: #060606;
+    --new-gold: #ffe000;
+    --golden-vanilla: #ffebcd;
     
+
+    
+    --back-background: var(--onyx);
+    --back-tech-popup: var(--onyx);
+    --back-crystal: var(--platinum);
+    --back-section-title: var(--platinum);
+    --back-crystal-border: var(--new-gold);
+
+    --text-base: var(--golden-vanilla);
+    --text-section-titles: var(--golden-vanilla);
+    --text-card-titles: var(--platinum);
+    --text-subtext: var(--platinum);
+
+    --deco-card-hr: var(--platinum);
+    --deco-subtle-hover: var(--platinum);
+    --deco-cube: var(--new-gold);
+
+    --card-background: var(--new-gold);
+    --card-guard: var(--new-gold);
+    --card-hover: var(--new-gold);
+
+    --tech: var(--new-gold);
+    --tech--alt: var(--onyx);
 
     --cube-height: 1.25em;
 }
@@ -42,7 +69,7 @@
 body {
     height: 100dvh;
     width: 100dvw;
-    color: var(--champagne-mist);
+    color: var(--text-base);
 
 }
 
@@ -79,7 +106,7 @@ body {
     height: 100%;
     
     z-index: -1;
-    background-color: var(--onyx);
+    background-color: var(--back-background);
 }
 
 #main-section {
@@ -113,7 +140,7 @@ body {
 */
 #main-avatar-inter-border {
     height: 98%;
-    background-color: var(--onyx);
+    background-color: var(--back-background);
 }
 
 #main-avatar-inner-border {
@@ -153,8 +180,8 @@ body {
     
     border-radius: 5px;
     
-    background-color: rgba(255, 255, 255, 0.01);
-    border: 1px solid rgba(255, 255, 255, 0.02);
+    background-color: rgba(from var(--back-crystal) r g b / 0.01);
+    border: 1px solid rgba(from var(--back-crystal-border) r g b / 0.05);
     backdrop-filter: blur(3px);
     
     text-align: center;
@@ -171,7 +198,7 @@ body {
     width: 80%;
     max-width: 20em;
     height: 6em;
-    
+
     justify-content: space-evenly;
 }
 
@@ -188,11 +215,9 @@ body {
 
     backdrop-filter: blur(3px);
     border-radius: 100%;
-    background-color: rgba(255, 255, 255, 0.01);
-    border: 1px solid rgba(255, 255, 255, 0.02);
+    background-color: rgba(from var(--back-crystal) r g b / 0.01);
+    border: 1px solid rgba(from var(--back-crystal-border) r g b / 0.05);
 
-    text-decoration: none;
-    color: blanchedalmond;
     transition: 0.4s;
 }
 
@@ -201,8 +226,7 @@ body {
 }
 
 .contact-box:hover {
-    background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background-color: rgba(from var(--deco-subtle-hover) r g b / 0.04);
 }
 
 @keyframes spin {
@@ -249,11 +273,11 @@ body {
     position: absolute;
     width: 100%;
     height: var(--cube-height);
-    color: rgba(from var(--royal-gold) r g b / 0.75);
+    color: rgba(from var(--deco-cube) r g b / 0.6);
     
-    background-color: rgba(from var(--royal-gold) r g b / 0.025);
-    border-top: 1px solid rgba(from var(--royal-gold) r g b / 0.25);
-    border-bottom: 1px solid rgba(from var(--royal-gold) r g b / 0.25);
+    background-color: rgba(from var(--deco-cube) r g b / 0.02);
+    border-top: 1px solid rgba(from var(--deco-cube) r g b / 0.2);
+    border-bottom: 1px solid rgba(from var(--deco-cube) r g b / 0.2);
     
     display: flex;
     align-items: center;
@@ -282,7 +306,7 @@ body {
 
 .sub-section {
     display: flex;
-
+    
     flex-direction: row;
     justify-content: start;
     align-items: start;
@@ -330,12 +354,13 @@ body {
 
 .sub-section-title {
     backdrop-filter: blur(3px);
-    background-color: rgba(255, 255, 255, 0.01);
-    border: 1px solid rgba(255, 255, 255, 0.02);
+    background-color: rgba(from var(--back-section-title) r g b / 0.01);
+    border: 1px solid rgba(from var(--back-section-title) r g b / 0.02);
     border-radius: 5px;
     margin-bottom: 1em;
     padding: 0.25em;
     font-size: 1.25em;
+    color: var(--text-section-titles);
 }
 
 .cardholder {
@@ -344,30 +369,31 @@ body {
     max-width: 800px;
 
     padding: 5px;
-    border: 1px solid rgba(from #ffff00 r g b / 0.4);
+    border: 1px solid rgba(from var(--card-guard) r g b / 0.3);
     border-radius: 5px;
     
     backdrop-filter: blur(5px);
-
-    text-decoration: none;
-    color: blanchedalmond;
 }
 
 .card {
     margin: 5px;
     padding: 10px;
     border-radius: 5px;
-    background-color: rgba(from var(--new-gold) r g b / 0.05);
+    background-color: rgba(from var(--card-background) r g b / 0.06);
     
     transition: 0.2s;
 }
 
+.card > .card-descriptor {
+    color: rgba(from var(--text-base) r g b / 0.9);
+}
+
 .card:hover {
-    background-color: rgba(from var(--golden-earth) r g b / 0.475);
+    background-color: rgba(from var(--card-hover) r g b / 0.075);
 }
 
 .card > h3 {
-    color: var(--champagne-mist)
+    color: var(--text-card-titles)
 }
 .card-descriptor {
     text-align: justify;
@@ -380,40 +406,35 @@ body {
 }
 
 .tech-hr {
-    color: rgba(255, 255, 255, 0.1);
+    color: rgba(from var(--deco-card-hr) r g b / 0.15);
     margin: 5px 0px;
 }
 
 .tech-title {
     font-size: 0.6rem;
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(from var(--text-subtext) r g b / 0.4);
     margin: 2px;
 }
 
 .tech {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 4px;
-
-    display: flex;
-    
+    background-color: rgba(from var(--tech--alt) r g b / 0.3);
+    border: 1px solid rgba(from var(--tech) r g b / 0.15);
     border-radius: 4px;
 
-    text-wrap: nowrap;
-    user-select: none;
-
+    padding: 4px;
     margin: 2px;
 
-    transition: 0.2s;
+    display: flex;
+    text-wrap: nowrap;
+    user-select: none;
 }
 
-/*
-.tech:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+.popup-togle:hover {
+    background-color: rgba(from var(--tech) r g b / 0.075);
+    border: 1px solid rgba(from var(--tech) r g b / 0.175);
     cursor: pointer;
 }
-*/
+
 
 .tech > p {
     font-size: 0.75rem;
@@ -423,7 +444,6 @@ body {
 .tech > * {
     align-self: center;
     margin: 0px 2px;
-    color: wheat;
 }
 
 .tech-popup {
@@ -436,7 +456,7 @@ body {
     top: 0;
 
     border-radius: 5px;
-    background-color: rgba(from var(--onyx) r g b / 0.95);
+    background-color: rgba(from var(--back-tech-popup) r g b / 0.95);
     backdrop-filter: blur(3px);
 
     
@@ -464,6 +484,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: 0.2s;
 }
 
 .fuck-off {
@@ -481,14 +503,13 @@ input[type=checkbox]:checked ~ .tech-popup {
     padding: 4px;
     font-size: 0.75em;
 
-    background-color: rgba(from var(--eternal-gold) r g b / 0.95);
-    border: 1px solid rgba(from var(--gold-soul) r g b / 0.95);
+    background-color: rgba(from var(--tech) r g b / 0.05);
+    border: 1px solid rgba(from var(--tech) r g b / 0.15);
     border-radius: 4px;
     height: fit-content;
     width: fit-content;
 
     font-weight: 700;
-    color: var(--champagne-mist);
 
     display: flex;
     justify-content: center;
@@ -500,7 +521,12 @@ input[type=checkbox]:checked ~ .tech-popup {
 .tech-square > * {
     align-self: center;
     margin: 0px 2px;
-    color: wheat;
 }
 
-
+/*
+█ Don't
+*/
+a {
+    text-decoration: none;
+    color: inherit;
+}
