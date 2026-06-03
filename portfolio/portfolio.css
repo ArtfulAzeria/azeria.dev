@@ -67,8 +67,8 @@
 █ Stupid mobile viewport substandart.
 */
 body {
-    height: 100svh;
-    width: 100svw;
+    height: 100lvh;
+    width: 100lvw;
     color: var(--text-base);
 
 }
@@ -78,8 +78,8 @@ body {
 █ This is the real bg, a single level over body.
 */
 #underground {
-    height: 100svh;
-    width: 100svw;
+    height: 100lvh;
+    width: 100lvw;
     display: flex;
 }
 
@@ -89,8 +89,8 @@ body {
 █ If something overflows the side, don't.
 */
 #background{
-    height: 100svh;
-    width: 100svw;
+    height: 100lvh;
+    width: 100lvw;
     display: flex;
     flex-direction: column;
     overflow: scroll;
@@ -102,8 +102,8 @@ body {
 #particle-background {
     position: absolute;
     
-    height: 100svh;
-    width: 100svw;
+    height: 100lvh;
+    width: 100lvw;
     
     z-index: -1;
     background-color: var(--back-background);
