@@ -427,6 +427,8 @@ body {
     display: flex;
     text-wrap: nowrap;
     user-select: none;
+
+    font-size: 0.75rem;
 }
 
 .popup-togle:hover {
@@ -435,9 +437,7 @@ body {
     cursor: pointer;
 }
 
-
 .tech > p {
-    font-size: 0.75rem;
     font-weight: 700;
 }
 
@@ -501,7 +501,7 @@ input[type=checkbox]:checked ~ .tech-popup {
 .tech-square {
     margin: 2px;
     padding: 4px;
-    font-size: 0.75em;
+    font-size: 0.75rem;
 
     background-color: rgba(from var(--tech) r g b / 0.05);
     border: 1px solid rgba(from var(--tech) r g b / 0.15);
