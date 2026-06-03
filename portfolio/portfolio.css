@@ -1,47 +1,52 @@
 :root {
-    --onyx: #111111;
-    --golden-earth: #926c15;
     --eternal-gold: #443512;
-    --royal-gold: #ffcb05;
-    --champagne-mist: #f2e8cf;
+    --golden-dusk: #574a2a;
+    --gold-soul: #745714;
+    --golden-earth: #926c15;
+    --royal-gold: #ffcb05; 
+
+
+
+
     --platinum: #ededed;
+    --onyx: #060606;
+    --new-gold: #ffe000;
+    --golden-vanilla: #ffebcd;
+    
+
+    
+    --back-background: var(--onyx);
+    --back-tech-popup: var(--onyx);
+    --back-crystal: var(--platinum);
+    --back-section-title: var(--platinum);
+    --back-crystal-border: var(--new-gold);
+
+    --text-base: var(--golden-vanilla);
+    --text-section-titles: var(--golden-vanilla);
+    --text-card-titles: var(--platinum);
+    --text-subtext: var(--platinum);
+
+    --deco-card-hr: var(--platinum);
+    --deco-subtle-hover: var(--platinum);
+    --deco-cube: var(--new-gold);
+
+    --card-background: var(--new-gold);
+    --card-guard: var(--new-gold);
+    --card-hover: var(--new-gold);
+
+    --tech: var(--new-gold);
+    --tech--alt: var(--onyx);
 
     --cube-height: 1.25em;
 }
 
 /*
 █ Fuck it, no hidden margin/padding anywhere.
+█ Include in the margins and paddings in the items themselves.
 */
 * {
     margin: 0;
     padding: 0;
-}
-
-/*
-█ Full dynamic-viewport so it has all the screen on every device.
-█ Stupid mobile viewport substandart.
-*/
-body {
-    height: 100dvh;
-    width: 100dvw;
-    color: var(--champagne-mist);
-
-}
-
-html {
-    font-size: 16px;
-}
-
-/*
-█ Make it 100% of parent (body{}).
-█ Include in itself the margins and paddings.
-█ Padding here might fuck up things. Don't.
-*/
-#background {
-    height: 100%;
-    width: 100%;
-    display: flex;
-
     box-sizing: border-box;
 }
 
@@ -57,87 +62,171 @@ html {
     "wdth" 100;
 }
 
-#over-background{
+/*
+█ Full dynamic-viewport so it has all the screen on every device.
+█ Stupid mobile viewport substandart.
+*/
+body {
+    height: 100dvh;
+    width: 100dvw;
+    color: var(--text-base);
+
+}
+
+/*
+█ Make it 100% of parent (body{}).
+█ This is the real bg, a single level over body.
+*/
+#underground {
     height: 100%;
     width: 100%;
     display: flex;
 }
 
-.mutable-section {
-    border: 1px solid rgba(255, 235, 205, 0.1);
-    box-sizing: border-box;
-    width: 85vw;
-    overflow: scroll;
-    overflow-x: hidden;
-    scroll-snap-type: both mandatory;
-    scrollbar-width: none;
-    
-}
-
-.canvas-wrap {
+/*
+█ This is the bg a level over undeground.
+█ In paralel with whatever the bakground is.
+█ If something overflows the side, don't.
+*/
+#background{
+    height: 100%;
+    width: 100%;
     display: flex;
-    background-color: var(--onyx);
-    
+    flex-direction: column;
+    overflow: scroll;
 }
 
-#canvas-particles {
+/*
+█ This the ever on whatever the bakground is.
+*/
+#particle-background {
     position: absolute;
     
     width: 100%;
     height: 100%;
     
     z-index: -1;
-    background-color: var(--onyx);
+    background-color: var(--back-background);
 }
 
-.permanent-section {
-    border: 1px solid rgba(255, 235, 205, 0.1);
-    box-sizing: border-box;
-    width: 15vw;
-
+#main-section {
+    position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    min-width: 100%;
+}
 
-    padding: 1vw;
-    
-    background-color: var(--onyx);
+/*
+█ Maths yay!
+*/
+#logo-section {
+    width: 80%;
+    max-width: 20em;
+    aspect-ratio: cos(30deg);
+    margin: 10em 0;
+}
+
+#main-avatar-outer-border {
+    height: 100%;
+    background-color: var(--gold-soul);
+}
+
+/*
+█ There are some interesting maths in this percentages.
+█ Maths that I'm not doing.
+*/
+#main-avatar-inter-border {
+    height: 98%;
+    background-color: var(--back-background);
+}
+
+#main-avatar-inner-border {
+    height: 97%;
+    background-color: var(--gold-soul);
+}
+
+#main-avatar {
+    height: 98%;
+    object-fit: cover;
+}
+
+.hexagon {
+    aspect-ratio: cos(30deg);
+    clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
+    pointer-events: none;
+    user-select: none;
+
+    /*
+    █ This bad boys are here just for accesibility.
+    █ If img fails, alt needs to be visible.
+    █ If not centered, clip-path fucks it.
+    */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .main-quote-card {
-    padding: 2rem;
+    margin-bottom: 5em;
+    padding: 1rem;
+    width: 80%;
+    max-width: 20em;
+    height: 6em;
+    
     border-radius: 5px;
-    width: 15em;
     
-    background-color: rgba(from var(--royal-gold) r g b / 0.02);
-
-    
+    background-color: rgba(from var(--back-crystal) r g b / 0.01);
+    border: 1px solid rgba(from var(--back-crystal-border) r g b / 0.05);
     backdrop-filter: blur(3px);
-}
-
-.main-quote {
-    font-size: 2rem;
-    font-weight: 800;
+    
     text-align: center;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    
+
+    align-content: center;
+
+    font-weight: 800;
 }
 
-.main-alts {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 4px;
-
+.socials {
     display: flex;
-    
-    border-radius: 4px;
+    flex-direction: row;
+    margin-bottom: 5em;
+    width: 80%;
+    max-width: 20em;
+    height: 6em;
 
-    text-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1em;
+
+    height: 3em;
+    width: 3em;
+
+    backdrop-filter: blur(3px);
+    border-radius: 100%;
+    background-color: rgba(from var(--back-crystal) r g b / 0.01);
+    border: 1px solid rgba(from var(--back-crystal-border) r g b / 0.05);
+
+    transition: 0.4s;
+}
+
+.contact-box > a {
     user-select: none;
+}
 
-    transition: 1s;
+.contact-box:hover {
+    background-color: rgba(from var(--deco-subtle-hover) r g b / 0.04);
 }
 
 @keyframes spin {
@@ -162,38 +251,40 @@ html {
     }
 }
 
-.inline-cube {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-}
-
-#main-alts-cube {
-    box-sizing: border-box;
-    height: var(--cube-height);
-    perspective: 2000px;
+.main-quote-card > p {
+    display: inline;
+    vertical-align: middle;
 }
 
 .cube {
-    width: 8em;
+    display: inline-block;
+
+    width: 7em;
     height: var(--cube-height);
     transform-style: preserve-3d;
     animation: spin 10s linear infinite;
+    
+    margin: 0 auto;
+    vertical-align: middle;
 }
 
 .cube-face {
     backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: var(--cube-height);
+    color: rgba(from var(--deco-cube) r g b / 0.6);
+    
+    background-color: rgba(from var(--deco-cube) r g b / 0.02);
+    border-top: 1px solid rgba(from var(--deco-cube) r g b / 0.2);
+    border-bottom: 1px solid rgba(from var(--deco-cube) r g b / 0.2);
+    
     display: flex;
     align-items: center;
-    justify-content: start;
-    position: absolute;
-    margin-left: 0.5em;
-    width: 100%;
-    /* border: 1px solid gold; */
-    height: var(--cube-height);
-    color: rgba(from var(--royal-gold) r g b / 0.75);
+    justify-content: center;
     
+    box-sizing: content-box;
+    padding: 0 0.25em;
 }
 
 .cube-face-front {
@@ -213,120 +304,96 @@ html {
     transform: rotateX(270deg) translateZ(calc(var(--cube-height) / 2));
 }
 
-.snap-tome {
-    height: 100vh;
-    scroll-snap-align: start;
-    scroll-margin: 0; 
-}
-
 .sub-section {
-    overflow: hidden;
-    height: 100%;
+    display: flex;
+    
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
     width: 100%;
+    min-width: 100%;
+
+    max-height: fit-content;
+
+    flex-wrap: wrap;
 }
 
-.sub-section-container {
+.columnable {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    min-width: 100%;
+
+    padding: 2em;
+}
+
+@media only screen and (min-width: 1000px) {
+    .sub-section {
+        padding: 2em;
+    }
+
+    .columnable {
+        width: 50%;
+        min-width: 50%;   
+    }
+
+    .columnable-left {
+        align-items: start;
+        
+    }
+
+    .columnable-right {
+        align-items: end;
+        
+    }
+
     
-    max-height: 100%; /* Enables scrolling in .sub-section-col */
 }
 
 .sub-section-title {
-    margin-bottom: 1rem;
-}
-
-.sub-section-col {
-    width: 45%;
-    
-    box-sizing: border-box;
-    margin: 0vw ;
-    display: flex;
-    box-sizing: border-box;
-    
-    padding: 0.6vw;
-    flex-direction: column;
-
-    overflow: scroll;
-}
-
-.main-avatar {
-    width: 100%;
-    align-self: center;
-    box-sizing: border-box;
-    
-    
-    user-select: none;
-    pointer-events: none;
-    
-    border: 0.3vw solid blanchedalmond;
-    border-radius: 100%;
-    
-}
-
-.contact-box {
-    display: flex;
-    flex-direction: row;
-    font-size: 1vw;
-    margin-top: 0.5rem;
-}
-
-.contact-box > i {
-    color: blanchedalmond;
-}
-
-.contact-box > a {
-    text-decoration: none;
-    color: blanchedalmond;
-    margin-left: 0.5vw;
-}
-
-.contact-box > sup {
-    margin-left: 0.25vw;
-    text-decoration: none;
-    color: rgb(100, 100, 100);
-}
-
-
-
-.permanent-section > h1 {
-    color: blanchedalmond;
-    margin-top: 1vw;
-    font-size: 2vw;
-}
-
-.permanent-section > h2 {
-    color: blanchedalmond;
-    margin-top: 1vw;
-    font-size: 1.25vw;
+    backdrop-filter: blur(3px);
+    background-color: rgba(from var(--back-section-title) r g b / 0.01);
+    border: 1px solid rgba(from var(--back-section-title) r g b / 0.02);
+    border-radius: 5px;
+    margin-bottom: 1em;
+    padding: 0.25em;
+    font-size: 1.25em;
+    color: var(--text-section-titles);
 }
 
 .cardholder {
     margin-bottom: 10px;
-    box-sizing: border-box;
-    
+    width: 100%;
+    max-width: 800px;
+
     padding: 5px;
-    border: 1px solid var(--golden-earth);
+    border: 1px solid rgba(from var(--card-guard) r g b / 0.3);
     border-radius: 5px;
     
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(5px);
 }
 
 .card {
     margin: 5px;
     padding: 10px;
     border-radius: 5px;
-    background-color: rgba(from var(--golden-earth) r g b / 0.4);
+    background-color: rgba(from var(--card-background) r g b / 0.06);
     
     transition: 0.2s;
 }
 
+.card > .card-descriptor {
+    color: rgba(from var(--text-base) r g b / 0.9);
+}
+
 .card:hover {
-    background-color: rgba(from var(--golden-earth) r g b / 0.475);
+    background-color: rgba(from var(--card-hover) r g b / 0.075);
 }
 
 .card > h3 {
-    color: var(--champagne-mist)
+    color: var(--text-card-titles)
 }
 .card-descriptor {
     text-align: justify;
@@ -335,52 +402,131 @@ html {
 
 .tech-container {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .tech-hr {
-    color: rgba(255, 255, 255, 0.1);
+    color: rgba(from var(--deco-card-hr) r g b / 0.15);
     margin: 5px 0px;
-}
-
-.tech:not(:first-child) {
-    margin-left: 5px;
 }
 
 .tech-title {
     font-size: 0.6rem;
-    color: rgba(255, 255, 255, 0.4);
-    margin-bottom: 2px;
+    color: rgba(from var(--text-subtext) r g b / 0.4);
+    margin: 2px;
 }
 
 .tech {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 4px;
-
-    display: flex;
-    
+    background-color: rgba(from var(--tech--alt) r g b / 0.3);
+    border: 1px solid rgba(from var(--tech) r g b / 0.15);
     border-radius: 4px;
 
+    padding: 4px;
+    margin: 2px;
+
+    display: flex;
     text-wrap: nowrap;
     user-select: none;
 
-    transition: 0.2s;
+    font-size: 0.75rem;
 }
 
-.tech:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+.popup-togle:hover {
+    background-color: rgba(from var(--tech) r g b / 0.075);
+    border: 1px solid rgba(from var(--tech) r g b / 0.175);
     cursor: pointer;
 }
 
 .tech > p {
-    font-size: 0.75rem;
     font-weight: 700;
 }
 
 .tech > * {
     align-self: center;
     margin: 0px 2px;
-    color: wheat;
 }
 
+.tech-popup {
+    position: absolute;
+    z-index: 2;
+
+    height: 100%;
+    width: 100%;
+    left: -2px;
+    top: 0;
+
+    border-radius: 5px;
+    background-color: rgba(from var(--back-tech-popup) r g b / 0.95);
+    backdrop-filter: blur(3px);
+
+    
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.15s, opacity 0.15s linear;
+
+    padding: 1em;
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: scroll;
+}
+
+.tech-popup > p {
+    text-wrap: wrap;
+    text-align: justify;
+    margin: 2px;
+}
+
+.popup-togle {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.2s;
+}
+
+.fuck-off {
+    display: none;
+}
+
+input[type=checkbox]:checked ~ .tech-popup {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.15s linear;
+}
+
+.tech-square {
+    margin: 2px;
+    padding: 4px;
+    font-size: 0.75rem;
+
+    background-color: rgba(from var(--tech) r g b / 0.05);
+    border: 1px solid rgba(from var(--tech) r g b / 0.15);
+    border-radius: 4px;
+    height: fit-content;
+    width: fit-content;
+
+    font-weight: 700;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-wrap: nowrap;
+    user-select: none;
+}
+
+.tech-square > * {
+    align-self: center;
+    margin: 0px 2px;
+}
+
+/*
+█ Don't
+*/
+a {
+    text-decoration: none;
+    color: inherit;
+}

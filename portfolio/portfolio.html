@@ -2,295 +2,407 @@
 <html lang="es">
 
 <head>
+    <!-- Boilerplate -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title -->
     <title>Azeria • Portfolio</title>
+
+    <!-- Resources -->
     <link rel="icon" type="image/x-icon" href="../resources/azeria-logo.ico">
     <link rel="stylesheet" href="portfolio.css">
-
+    
+    <!-- Font - Open Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <!-- Icons -->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
 <body>
-    
-    <div id="background" class="open-sans-font">  
-    
-        <div class="canvas-wrap">
-            <canvas id="canvas-particles"></canvas>
-        </div> 
-        <div id="over-background">
-            <div class="permanent-section">
-                
-                <img class="main-avatar" src="../resources/azeria-logo.png" alt="Logo de azeria">
-                <h1>Azeria</h1>
-                <hr>
-                <h2>Contáctame</h2>
-                <div class="contact-box">
-                    <i class="bi bi-envelope"></i>
-                    <a href="mailto:admin@azeria.dev">admin@azeria.dev</a>
-                </div>
-                <div class="contact-box">
-                    <i class="bi bi-bluesky"></i>
-                    <a href="https://bsky.app/profile/admin.azeria.dev">@admin.azeria.dev</a>
-                </div>
-                <div class="contact-box">
-                    <i class="bi bi-github"></i>
-                    <a href="https://github.com/ArtfulAzeria/">ArtfulAzeria</a>
-                </div>
-                <div class="contact-box">
-                    <i class="bi bi-wikipedia"></i>
-                    <a href="https://es.wikipedia.org/wiki/Usuario:CraftyAzeria">CraftyAzeria</a>
-                </div>
-                <h2>Skills</h2>
-            </div>
-            <div class="mutable-section">
-                
-                <div class="snap-tome">
-                    <div class="sub-section-00 sub-section">
-                        <div class="main-quote sub-section-container">
-                            <div class="main-quote-card">
-                                <p>Mi nombre es Azeria, y soy</p>
-                                <div class="inline-cube">
-                                    <p>tu próximo</p>
-                                    <div id="main-alts-cube">
-                                        <div class="cube">
-                                            <div class="cube-face cube-face-front"><p>Desarrollador</p></div>
-                                            <div class="cube-face cube-face-top"><p>Forense</p></div>
-                                            <div class="cube-face cube-face-back"><p>Diseñador</p></div>
-                                            <div class="cube-face cube-face-bottom"><p>Arquitecto</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="snap-tome">
-                    <div class="sub-section-01 sub-section">
-                        <div class="sub-section-container">
-                            <div class="sub-section-col">
-                                <h3 class="sub-section-title">Mis proyectos de código abierto</h3>
-                                <div class="cardholder">
-                                    <div class="card">
-                                        <h3>Página web de Azeria</h3>
-                                        <p class="card-descriptor">Diseño, desarrollo y despliegue. ¡El ciclo completo de la creación web! La página que estás viendo ha sido íntegramente creada por mi, y despleagada en los servidores de mi laboratorio.</p>
-                                        
-                                        <hr class="tech-hr">
-                                        <p class="tech-title">Habilidades y tecnologías involucradas</p>
-                                        <div class="tech-container">
-                                            <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
-                                            <div class="tech"> <i class="devicon-vscode-plain"></i><p>VSC</p></div>
-                                            <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
-                                            <div class="tech"><p>• • •</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cardholder">
-                                    <div class="card">
-                                        <h3>Aemet Avisa</h3>
-                                        <p class="card-descriptor">Los fenómenos naturales son una preocupación creciente. Este aplicativo genera un mapa de avisos meteorológicos activos basándose en los informes CAP que proporciona AEMET en tiempo real.</p>
-                                        
-                                        <hr class="tech-hr">
-                                        <p class="tech-title">Habilidades y tecnologías involucradas</p>
-                                        <div class="tech-container">
-                                            <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
-                                            <div class="tech"> <i class="devicon-vscode-plain"></i><p>VSC</p></div>
-                                            <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
-                                            <div class="tech"><p>• • •</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cardholder">
-                                    <div class="card">
-                                        <h3>Year Left</h3>
-                                        <p class="card-descriptor">La primera utilidad que desplegué en mi laboratorio, resiliente, continúa funcionando aún a día de hoy. Un bot que cada día crea un post en Bluesky diciendo los días que faltan para terminar el año.</p>
-                                        
-                                        <hr class="tech-hr">
-                                        <p class="tech-title">Habilidades y tecnologías involucradas</p>
-                                        <div class="tech-container">
-                                            <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
-                                            <div class="tech"> <i class="devicon-vscode-plain"></i><p>VSC</p></div>
-                                            <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
-                                            <div class="tech"><p>• • •</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sub-section-col">
-                                <h3 class="sub-section-title">Mis contribuciones de código abierto</h3>
-                                <div class="cardholder">
-                                    <div class="card">
-                                        <h3>Electricity maps</h3>
-                                        <p class="card-descriptor">Los gobiernos han ser responsables de sus políticas climáticas. Esta página permite a la ciudadanía a conocer las relaciones energéticas globales en tiempo real.</p>
-                                        
-                                        <hr class="tech-hr">
-                                        <p class="tech-title">Habilidades y tecnologías involucradas</p>
-                                        <div class="tech-container">
-                                            <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
-                                            <div class="tech"> <i class="devicon-vscode-plain"></i><p>VSC</p></div>
-                                            <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
-                                            <div class="tech"><p>• • •</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cardholder">
-                                    <div class="card">
-                                        <h3>Quartz</h3>
-                                        <p class="card-descriptor">¿Alguna vez has querido tener tu propio blog? ¡Quartz convierte tu caja fuerte de Obsidian en una página web lista para ser hosteada!</p>
-                                        
-                                        <hr class="tech-hr">
-                                        <p class="tech-title">Habilidades y tecnologías involucradas</p>
-                                        <div class="tech-container">
-                                            <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
-                                            <div class="tech"> <i class="devicon-vscode-plain"></i><p>VSC</p></div>
-                                            <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
-                                            <div class="tech"><p>• • •</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="snap-tome">
-                    <div class="sub-section-02 sub-section">
-                        <div class="sub-section-container">
-                            <div class="card">
+    <div id="underground" class="open-sans-font">
+
+        <!-- This is just the background, parallel to the content -->
+        <canvas id="particle-background"></canvas>
+        
+        
+
+        <!-- Now, here is the content -->
+        <div id="background">
+
+            <div id="main-section">
+                <!-- Logo -->
+                <div id="logo-section">
+                    <div id="main-avatar-outer-border" class="hexagon">
+                        <div id="main-avatar-inter-border" class="hexagon">
+                            <div id="main-avatar-inner-border" class="hexagon">
+                                <img id="main-avatar" class="hexagon" src="../resources/azeria-logo-dark-gold.png" alt="Logo de Azeria">
                                 
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="snap-tome">
-                    <div class="sub-section-03 sub-section">
-                        <div class="sub-section-container">
-                            <div class="sub-section-col">
-                                <h3 class="sub-section-title">Experiencia laboral</h3>
-                                <div class="cardholder">
-                                    <div class="card">
-                                        <h3>DevOps</h3>
-                                        <p class="card-descriptor">Desarrollo y mantenimiento para un cliente globalmente reconocido en el sector de la banca. Trabajando en remoto junto con un amplio equipo de Madrid.</p>
-                                        
-                                        <hr class="tech-hr">
-                                        <p class="tech-title">Habilidades y tecnologías involucradas</p>
-                                        <div class="tech-container">
-                                            <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
-                                            <div class="tech"> <i class="devicon-vscode-plain"></i><p>VSC</p></div>
-                                            <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
-                                            <div class="tech"><p>• • •</p></div>
-                                        </div>
+                <!-- Presentation -->
+                <div class="main-quote-card">
+                    <p>Mi nombre es Azeria, y soy tu próximo</p>
+                    <div class="cube">
+                        <div class="cube-face cube-face-front"><p>Desarrollador</p></div>
+                        <div class="cube-face cube-face-top"><p>Forense</p></div>
+                        <div class="cube-face cube-face-back"><p>Diseñador</p></div>
+                        <div class="cube-face cube-face-bottom"><p>Arquitecto</p></div>
+                    </div>
+                </div>
+                <div class="socials">
+                    <a class="contact-box" href="mailto:admin@azeria.dev"><i class="bi bi-envelope"></i></a>
+                    <a class="contact-box" href="https://bsky.app/profile/admin.azeria.dev"><i class="bi bi-bluesky"></i></a>
+                    <a class="contact-box" href="https://github.com/ArtfulAzeria/"><i class="bi bi-github"></i></a>
+                    <a class="contact-box" href="https://es.wikipedia.org/wiki/Usuario:CraftyAzeria"><i class="bi bi-wikipedia"></i></a>
+                    
+                </div>
+            </div>
+
+            <div class="sub-section">
+                <div class="columnable columnable-right">
+                    <h3 class="sub-section-title">Proyectos de código abierto</h3>
+                    <a href="https://github.com/ArtfulAzeria/azeria.dev" class="cardholder">
+                        <div class="card">
+                            <h3>Página web de Azeria</h3>
+                            <p class="card-descriptor">Diseño, desarrollo y despliegue. ¡El ciclo completo de la creación web! La página que estás viendo ha sido íntegramente creada por mi, y desplegada en los servidores de mi laboratorio.</p>
+                            
+                            <hr class="tech-hr">
+                            <p class="tech-title">Habilidades y tecnologías involucradas</p>
+                            <div class="tech-container">
+                                <div class="tech"> <i class="devicon-nginx-plain"></i><p>Nginx</p></div>
+                                <div class="tech"><i class="devicon-cloudflare-plain"></i><p>CloudFlare</p></div>
+                                <div class="tech"><i class="devicon-css3-plain"></i><p>CSS3</p></div>
+                                <label for="popup" class="tech popup-togle"><p>• • •</p>
+                                    <input type="checkbox" id="popup" class="fuck-off">
+                                    <div class="tech-popup">
+                                        <div class="tech-square"><i class="devicon-bash-plain"></i><p>Bash</p></div>
+                                        <div class="tech-square"><i class="devicon-cloudflare-plain"></i><p>Cloudflare</p></div>
+                                        <div class="tech-square"><i class="devicon-css3-plain"></i><p>CSS3</p></div>
+                                        <div class="tech-square"><i class="devicon-docker-plain"></i><p>Docker</p></div>
+                                        <div class="tech-square"><i class="devicon-git-plain"></i><p>Git</p></div>
+                                        <div class="tech-square"><i class="devicon-github-plain"></i><p>GitHub</p></div>
+                                        <div class="tech-square"><i class="devicon-html5-plain"></i><p>HTML5</p></div>
+                                        <div class="tech-square"><i class="devicon-javascript-plain"></i><p>JavaScript</p></div>
+                                        <div class="tech-square"><i class="devicon-vscode-plain"></i><p>VSC</p></div>
+                                        <div class="tech-square"><i class="devicon-linux-plain"></i><p>Linux</p></div>
+                                        <div class="tech-square"><i class="devicon-markdown-plain"></i><p>Markdown</p></div>
+                                        <div class="tech-square"><i class="devicon-nginx-plain"></i><p>Nginx</p></div>
+                                        <div class="tech-square"><i class="devicon-powershell-plain"></i><p>PowerShell</p></div>
+                                        <div class="tech-square"><i class="devicon-ssh-plain"></i><p>SSH</p></div>
+                                        <div class="tech-square"><i class="devicon-yaml-plain"></i><p>YAML</p></div>
                                     </div>
-                                </div>
-                                <div class="cardholder">
-                                    <div class="card">
-                                        <h3>Backend Dev</h3>
-                                        <p class="card-descriptor">Desarrollo y mantenimiento en un gran proyecto multidisciplinar, resolviendo tickets de incidencias y creando nuevas funcionalidades en su API.</p>
-                                        
-                                        <hr class="tech-hr">
-                                        <p class="tech-title">Habilidades y tecnologías involucradas</p>
-                                        <div class="tech-container">
-                                            <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
-                                            <div class="tech"> <i class="devicon-vscode-plain"></i><p>VSC</p></div>
-                                            <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
-                                            <div class="tech"><p>• • •</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cardholder">
-                                    <div class="card">
-                                        <h3>DevSecOps</h3>
-                                        <p class="card-descriptor">Desarrollo, testing, y configruación de sistemas en una gran firma de consultoría de alcance internacional.</p>
-                                        
-                                        <hr class="tech-hr">
-                                        <p class="tech-title">Habilidades y tecnologías involucradas</p>
-                                        <div class="tech-container">
-                                            <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
-                                            <div class="tech"> <i class="devicon-vscode-plain"></i><p>VSC</p></div>
-                                            <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
-                                            <div class="tech"><p>• • •</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cardholder">
-                                    <div class="card">
-                                        <h3>FullStack Dev</h3>
-                                        <p class="card-descriptor">Actualización del sistema y contenido de los servidores de una empresa local haciendo uso de su CMS y un stack de tecnologías popular.</p>
-                                        
-                                        <hr class="tech-hr">
-                                        <p class="tech-title">Habilidades y tecnologías involucradas</p>
-                                        <div class="tech-container">
-                                            <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
-                                            <div class="tech"> <i class="devicon-vscode-plain"></i><p>VSC</p></div>
-                                            <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
-                                            <div class="tech"><p>• • •</p></div>
-                                        </div>
-                                    </div>
-                                </div>
+                                </label>
                             </div>
-                            <div class="sub-section-col">
-                                <h3 class="sub-section-title">Estudios cursados</h3>
-                                <div class="cardholder">
-                                    <div class="card">
-                                        <h3>Ciberseguridad</h3>
-                                        <p class="card-descriptor">Donde me he formado en conocimientos como análisis forense informático, bastionado de redes y sistemas, hackeo ético, aplicación normativa, y mucho más.</p>
-                                        
-                                        <hr class="tech-hr">
-                                        <p class="tech-title">Habilidades y tecnologías involucradas</p>
-                                        <div class="tech-container">
-                                            <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
-                                            <div class="tech"> <i class="devicon-vscode-plain"></i><p>VSC</p></div>
-                                            <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
-                                            <div class="tech"><p>• • •</p></div>
-                                        </div>
+                        </div>
+                    </a>
+                    <a href="https://github.com/ArtfulAzeria/aemet-avisa-v2" class="cardholder">
+                        <div class="card">
+                            <h3>Aemet Avisa</h3>
+                            <p class="card-descriptor">Los fenómenos naturales son una preocupación creciente. Este aplicativo genera un mapa de avisos meteorológicos activos basándose en los informes CAP que proporciona AEMET en tiempo real.</p>
+                            
+                            <hr class="tech-hr">
+                            <p class="tech-title">Habilidades y tecnologías involucradas</p>
+                            <div class="tech-container">
+                                <div class="tech"><i class="devicon-python-plain"></i><p>Python</p></div>
+                                <div class="tech"><i class="devicon-docker-plain"></i><p>Docker</p></div>
+                                <div class="tech"><i class="devicon-typescript-plain"></i><p>TypeScript</p></div>
+                                <label for="popup2" class="tech popup-togle"><p>• • •</p>
+                                    <input type="checkbox" id="popup2" class="fuck-off">
+                                    <div class="tech-popup">
+                                        <div class="tech-square"><i class="devicon-bash-plain"></i><p>Bash</p></div>
+                                        <div class="tech-square"><i class="devicon-cloudflare-plain"></i><p>Cloudflare</p></div>
+                                        <div class="tech-square"><i class="devicon-docker-plain"></i><p>Docker</p></div>
+                                        <div class="tech-square"><i class="devicon-git-plain"></i><p>Git</p></div>
+                                        <div class="tech-square"><i class="devicon-github-plain"></i><p>GitHub</p></div>
+                                        <div class="tech-square"><i class="devicon-javascript-plain"></i><p>JavaScript</p></div>
+                                        <div class="tech-square"><i class="devicon-json-plain"></i><p>JSON</p></div>
+                                        <div class="tech-square"><i class="devicon-vscode-plain"></i><p>VSC</p></div>
+                                        <div class="tech-square"><i class="devicon-linux-plain"></i><p>Linux</p></div>
+                                        <div class="tech-square"><i class="devicon-markdown-plain"></i><p>Markdown</p></div>
+                                        <div class="tech-square"><i class="devicon-nginx-plain"></i><p>Nginx</p></div>
+                                        <div class="tech-square"><i class="devicon-npm-plain"></i><p>NPM</p></div>
+                                        <div class="tech-square"><i class="devicon-powershell-plain"></i><p>PowerShell</p></div>
+                                        <div class="tech-square"><i class="devicon-pycharm-plain"></i><p>Pycharm</p></div>
+                                        <div class="tech-square"><i class="devicon-python-plain"></i><p>Python</p></div>
+                                        <div class="tech-square"><i class="devicon-ssh-plain"></i><p>SSH</p></div>
+                                        <div class="tech-square"><i class="devicon-typescript-plain"></i><p>TypeScript</p></div>
+                                        <div class="tech-square"><i class="devicon-yaml-plain"></i><p>YAML</p></div>
+                                        <div class="tech-square"><i class="devicon-xml-plain"></i><p>XML</p></div>
                                     </div>
-                                </div>
-                                <div class="cardholder">
-                                    <div class="card">
-                                        <h3>Desarrollo de aplicaciones</h3>
-                                        <p class="card-descriptor">Donde he aprendido cuestiones como diseño, desarrollo en múltiples lenguajes de programación, bases de datos, despliegue, configuración de sistemas, y mucho más.</p>
-                                        
-                                        <hr class="tech-hr">
-                                        <p class="tech-title">Habilidades y tecnologías involucradas</p>
-                                        <div class="tech-container">
-                                            <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
-                                            <div class="tech"> <i class="devicon-vscode-plain"></i><p>VSC</p></div>
-                                            <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
-                                            <div class="tech"><p>• • •</p></div>
-                                        </div>
+                                </label>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://github.com/ArtfulAzeria/year-left" class="cardholder">
+                        <div class="card">
+                            <h3>Year Left</h3>
+                            <p class="card-descriptor">La primera utilidad que desplegué en mi laboratorio, resiliente, continúa funcionando aún a día de hoy. Un bot que cada día crea un post en Bluesky diciendo los días que faltan para terminar el año.</p>
+                            
+                            <hr class="tech-hr">
+                            <p class="tech-title">Habilidades y tecnologías involucradas</p>
+                            <div class="tech-container">
+                                <div class="tech"><i class="devicon-bash-plain"></i><p>Bash</p></div>
+                                <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
+                                <div class="tech"> <i class="devicon-ssh-plain"></i><p>SSH</p></div>
+                                <label for="popup3" class="tech popup-togle"><p>• • •</p>
+                                    <input type="checkbox" id="popup3" class="fuck-off">
+                                    <div class="tech-popup">
+                                        <div class="tech-square"><i class="devicon-bash-plain"></i><p>Bash</p></div>
+                                        <div class="tech-square"><i class="devicon-cloudflare-plain"></i><p>Cloudflare</p></div>
+                                        <div class="tech-square"><i class="devicon-docker-plain"></i><p>Docker</p></div>
+                                        <div class="tech-square"><i class="devicon-git-plain"></i><p>Git</p></div>
+                                        <div class="tech-square"><i class="devicon-github-plain"></i><p>GitHub</p></div>
+                                        <div class="tech-square"><i class="devicon-javascript-plain"></i><p>JavaScript</p></div>
+                                        <div class="tech-square"><i class="devicon-vscode-plain"></i><p>VSC</p></div>
+                                        <div class="tech-square"><i class="devicon-linux-plain"></i><p>Linux</p></div>
+                                        <div class="tech-square"><i class="devicon-markdown-plain"></i><p>Markdown</p></div>
+                                        <div class="tech-square"><i class="devicon-nginx-plain"></i><p>Nginx</p></div>
+                                        <div class="tech-square"><i class="devicon-npm-plain"></i><p>NPM</p></div>
+                                        <div class="tech-square"><i class="devicon-powershell-plain"></i><p>PowerShell</p></div>
+                                        <div class="tech-square"><i class="devicon-ssh-plain"></i><p>SSH</p></div>
+                                        <div class="tech-square"><i class="devicon-typescript-plain"></i><p>TypeScript</p></div>
+                                        <div class="tech-square"><i class="devicon-yaml-plain"></i><p>YAML</p></div>
                                     </div>
-                                </div>
+                                </label>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="columnable columnable-left">
+                    <h3 class="sub-section-title">Contribuciones de código abierto</h3>
+                    <a href="https://github.com/electricitymaps/electricitymaps-contrib" class="cardholder">
+                        <div class="card">
+                            <h3>Electricity maps</h3>
+                            <p class="card-descriptor">Aplicación que permite conocer las relaciones energéticas globales en tiempo real. Entra y descubre cómo se coordina el mix energético de cada país y quién está cediendo energía a quién.</p>
+                            
+                            <hr class="tech-hr">
+                            <p class="tech-title">Habilidades y tecnologías involucradas</p>
+                            <div class="tech-container">
+                                <div class="tech"><i class="devicon-git-plain"></i><p>Git</p></div>
+                                <div class="tech"><i class="devicon-github-plain"></i><p>GitHub</p></div>
+                                <div class="tech"><i class="devicon-vscode-plain"></i><p>VSC</p></div>
+                                <label for="popup4" class="tech popup-togle"><p>• • •</p>
+                                    <input type="checkbox" id="popup4" class="fuck-off">
+                                    <div class="tech-popup">
+                                        <div class="tech-square"><i class="devicon-git-plain"></i><p>Git</p></div>
+                                        <div class="tech-square"><i class="devicon-github-plain"></i><p>GitHub</p></div>
+                                        <div class="tech-square"><i class="devicon-json-plain"></i><p>JSON</p></div>
+                                        <div class="tech-square"><i class="devicon-linux-plain"></i><p>Linux</p></div>
+                                        <div class="tech-square"><i class="devicon-vscode-plain"></i><p>VSC</p></div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://github.com/jackyzha0/quartz" class="cardholder">
+                        <div class="card">
+                            <h3>Quartz</h3>
+                            <p class="card-descriptor">Herramienta que convierte tu caja fuerte de Obsidian en una página web lista para ser desplegada y hospedada. Ideal para usuarios que quieran crear su propio jardín digital.</p>
+                            
+                            <hr class="tech-hr">
+                            <p class="tech-title">Habilidades y tecnologías involucradas</p>
+                            <div class="tech-container">
+                                <div class="tech"><i class="devicon-html5-plain"></i><p>HTML5</p></div>
+                                <div class="tech"><i class="devicon-linux-plain"></i><p>Linux</p></div>
+                                <div class="tech"><i class="devicon-typescript-plain"></i><p>TypeScript</p></div>
+                                <label for="popup5" class="tech popup-togle"><p>• • •</p>
+                                    <input type="checkbox" id="popup5" class="fuck-off">
+                                    <div class="tech-popup">
+                                        <div class="tech-square"><i class="devicon-css3-plain"></i><p>CSS3</p></div>
+                                        <div class="tech-square"><i class="devicon-git-plain"></i><p>Git</p></div>
+                                        <div class="tech-square"><i class="devicon-github-plain"></i><p>GitHub</p></div>
+                                        <div class="tech-square"><i class="devicon-html5-plain"></i><p>HTML5</p></div>
+                                        <div class="tech-square"><i class="devicon-linux-plain"></i><p>Linux</p></div>
+                                        <div class="tech-square"><i class="devicon-powershell-plain"></i><p>PowerShell</p></div>
+                                        <div class="tech-square"><i class="devicon-typescript-plain"></i><p>TypeScript</p></div>
+                                        <div class="tech-square"><i class="devicon-vscode-plain"></i><p>VSC</p></div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="sub-section">
+                <div class="columnable columnable-right">
+                    <h3 class="sub-section-title">Experiencia profesional</h3>
+                    <div class="cardholder">
+                        <div class="card">
+                            <h3>DevOps</h3>
+                            <p class="card-descriptor">Desarrollo y mantenimiento para un cliente globalmente reconocido en el sector de la banca. Trabajando en remoto junto con un amplio equipo de Madrid.</p>
+                            
+                            <hr class="tech-hr">
+                            <p class="tech-title">Habilidades y tecnologías involucradas</p>
+                            <div class="tech-container">
+                                <div class="tech"><i class="devicon-amazonwebservices-plain-wordmark"></i><p>AWS</p></div>
+                                <div class="tech"><i class="devicon-java-plain"></i><p>Java</p></div>
+                                <div class="tech"><i class="devicon-jira-plain"></i><p>Jira</p></div>
+                                <label for="popup6" class="tech popup-togle"><p>• • •</p>
+                                    <input type="checkbox" id="popup6" class="fuck-off">
+                                    <div class="tech-popup">
+                                        <div class="tech-square"><i class="bi bi-exclamation-triangle"></i><p>Confidencial</p></div>
+                                        <p>No se muestra el stack tecnológico completo por confidencialidad profesional, tan solo se mencionan las tres tecnologías públicas clave.</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardholder">
+                        <div class="card">
+                            <h3>Backend Dev</h3>
+                            <p class="card-descriptor">Desarrollo y mantenimiento en un gran proyecto multidisciplinar, resolviendo tickets de incidencias y creando nuevas funcionalidades en su API.</p>
+                            
+                            <hr class="tech-hr">
+                            <p class="tech-title">Habilidades y tecnologías involucradas</p>
+                            <div class="tech-container">
+                                <div class="tech"><i class="devicon-spring-original"></i><p>Spring</p></div>
+                                <div class="tech"><i class="bi bi-hexagon"></i><p>Arquitectura hexagonal</p></div>
+                                <div class="tech"><i class="bi bi-grid-1x2-fill"></i><p>Microservicios</p></div>
+                                <label for="popup7" class="tech popup-togle"><p>• • •</p>
+                                    <input type="checkbox" id="popup7" class="fuck-off">
+                                    <div class="tech-popup">
+                                        <div class="tech-square"><i class="bi bi-exclamation-triangle"></i><p>Confidencial</p></div>
+                                        <p>No se muestra el stack tecnológico completo por confidencialidad profesional, tan solo se mencionan las tres tecnologías públicas clave.</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardholder">
+                        <div class="card">
+                            <h3>DevSecOps</h3>
+                            <p class="card-descriptor">Desarrollo, testing, y configuración de sistemas en una gran firma de consultoría de alcance internacional.</p>
+                            
+                            <hr class="tech-hr">
+                            <p class="tech-title">Habilidades y tecnologías involucradas</p>
+                            <div class="tech-container">
+                                <div class="tech"><i class="devicon-amazonwebservices-plain-wordmark"></i><p>AWS</p></div>
+                                <div class="tech"><i class="devicon-java-plain"></i><p>Java</p></div>
+                                <div class="tech"><i class="devicon-junit-plain"></i><p>Junit</p></div>
+                                <label for="popup8" class="tech popup-togle"><p>• • •</p>
+                                    <input type="checkbox" id="popup8" class="fuck-off">
+                                    <div class="tech-popup">
+                                        <div class="tech-square"><i class="bi bi-exclamation-triangle"></i><p>Confidencial</p></div>
+                                        <p>No se muestra el stack tecnológico completo por confidencialidad profesional, tan solo se mencionan las tres tecnologías públicas clave.</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardholder">
+                        <div class="card">
+                            <h3>FullStack Dev</h3>
+                            <p class="card-descriptor">Actualización del sistema y contenido de los servidores de una empresa local haciendo uso de su CMS y un popular stack de tecnologías.</p>
+                            
+                            <hr class="tech-hr">
+                            <p class="tech-title">Habilidades y tecnologías involucradas</p>
+                            <div class="tech-container">
+                                <div class="tech"><i class="devicon-html5-plain"></i><p>HTML5</p></div>
+                                <div class="tech"><i class="devicon-css3-plain"></i><p>CSS3</p></div>
+                                <div class="tech"><i class="devicon-javascript-plain"></i><p>JavaScript</p></div>
+                                <label for="popup9" class="tech popup-togle"><p>• • •</p>
+                                    <input type="checkbox" id="popup9" class="fuck-off">
+                                    <div class="tech-popup">
+                                        <div class="tech-square"><i class="bi bi-exclamation-triangle"></i><p>Confidencial</p></div>
+                                        <p>No se muestra el stack tecnológico completo por confidencialidad profesional, tan solo se mencionan las tres tecnologías públicas clave.</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columnable columnable-left">
+                    <h3 class="sub-section-title">Estudios cursados</h3>
+                    <div class="cardholder">
+                        <div class="card">
+                            <h3>Ciberseguridad</h3>
+                            <p class="card-descriptor">Donde me he formado en conocimientos como análisis forense informático, bastionado de redes y sistemas, hackeo ético, aplicación normativa, y mucho más.</p>
+                            
+                            <hr class="tech-hr">
+                            <p class="tech-title">Habilidades y tecnologías involucradas</p>
+                            <div class="tech-container">
+                                <div class="tech"><i class="bi bi-device-hdd-fill"></i><p>Análisis forense</p></div>
+                                <div class="tech"><i class="bi bi-search"></i><p>Detección de intrusos</p></div>
+                                <div class="tech"><i class="bi bi-wifi"></i><p>Securación de redes</p></div>
+                                <label for="popup10" class="tech popup-togle"><p>• • •</p>
+                                    <input type="checkbox" id="popup10" class="fuck-off">
+                                    <div class="tech-popup">
+                                        <div class="tech-square"><i class="bi bi-bug"></i><p>Análisis de vulnerabilidades</p></div>
+                                        <div class="tech-square"><i class="bi bi-device-hdd-fill"></i><p>Análisis forense</p></div>
+                                        <div class="tech-square"><i class="bi bi-bank2"></i><p>Compliance</p></div>
+                                        <div class="tech-square"><i class="bi bi-search"></i><p>Detección de intrusos</p></div>
+                                        <div class="tech-square"><i class="devicon-docker-plain"></i><p>Docker</p></div>
+                                        <div class="tech-square"><i class="bi bi-bricks"></i><p>Firewalls</p></div>
+                                        <div class="tech-square"><i class="devicon-kalilinux-plain"></i><p>Kali</p></div>
+                                        <div class="tech-square"><i class="devicon-linux-plain"></i><p>Linux</p></div>
+                                        <div class="tech-square"><i class="devicon-pfsense-plain"></i><p>PfSense</p></div>
+                                        <div class="tech-square"><i class="bi bi-wifi"></i><p>Securación de redes</p></div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardholder">
+                        <div class="card">
+                            <h3>Desarrollo de aplicaciones</h3>
+                            <p class="card-descriptor">Donde he aprendido cuestiones como diseño, desarrollo en múltiples lenguajes de programación, bases de datos, despliegue, configuración de sistemas, y mucho más.</p>
+                            
+                            <hr class="tech-hr">
+                            <p class="tech-title">Habilidades y tecnologías involucradas</p>
+                            <div class="tech-container">
+                                <div class="tech"><i class="bi bi-database"></i><p>Bases de datos</p></div>
+                                <div class="tech"><i class="bi bi-cloud-fill"></i><p>Cloud</p></div>
+                                <div class="tech"><i class="bi bi-hdd-rack"></i><p>Desarrollo y despliegue</p></div>
+                                <label for="popup11" class="tech popup-togle"><p>• • •</p>
+                                    <input type="checkbox" id="popup11" class="fuck-off">
+                                    <div class="tech-popup">
+                                        <div class="tech-square"><i class="bi bi-database"></i><p>Bases de datos</p></div>
+                                        <div class="tech-square"><i class="bi bi-cloud-fill"></i><p>Cloud</p></div>
+                                        <div class="tech-square"><i class="bi bi-person-check"></i><p>Criptografía</p></div>
+                                        <div class="tech-square"><i class="bi bi-hdd-rack"></i><p>Desarrollo y despliegue</p></div>
+                                        <div class="tech-square"><i class="devicon-docker-plain"></i><p>Docker</p></div>
+                                        <div class="tech-square"><i class="bi bi-pie-chart-fill"></i><p>Estructuras de datos</p></div>
+                                        <div class="tech-square"><i class="devicon-git-plain"></i><p>Git</p></div>
+                                        <div class="tech-square"><i class="devicon-linux-plain"></i><p>Linux</p></div>
+                                        <div class="tech-square"><i class="bi bi-cpu"></i><p>Sistemas</p></div>
+                                        <div class="tech-square"><i class="devicon-spring-original"></i><p>Spring</p></div>
+                                    </div>
+                                </label>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
+
     </div>
     
+
+    <!-- This loads the background and its configuration -->
     <script src="https://cdn.jsdelivr.net/npm/canvasparticles-js/dist/index.umd.js"></script>
     <script>
-        const selector = '#canvas-particles'
+        const selector = '#particle-background'
         const options = {
-        
-        mouse: {
-            interactionType: CanvasParticles.interactionType.NONE,
-        },
-        particles: {
-            color: 'rgba(146, 108, 21, 0.4)',
-            max: 200,
-            relSpeed: 0.1,
-            ppm: 250,
-            max: 250,
-        },
+            mouse: {
+                interactionType: CanvasParticles.interactionType.NONE,
+            },
+            particles: {
+                color: 'rgba(146, 108, 21, 0.4)',
+                relSpeed: 0.15,
+                ppm: 350,
+                max: 350,
+            },
         }
         new CanvasParticles(selector, options).start()
     </script>
-    <script src="portfolio.js"></script> 
 </body>
 
 </html>
